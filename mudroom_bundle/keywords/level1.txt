@@ -1,0 +1,10 @@
+debug
+retry
+failed
+error
+trace
+temp
+attempt
+maybe
+check again
+broken

@@ -1,0 +1,37 @@
+# mudroom_sorter.py
+
+LEVEL_KEYWORDS = {
+    "L1": ["debug", "retry", "failed", "error", "trace", "temp", "attempt", "maybe", "check again", "broken"],
+    "L2": ["lesson", "verified", "realized", "confirmed", "build pattern", "in hindsight", "creation logging", "revised", "freeze-dried", "worked"],
+    "L3": ["strategy", "vision", "direction", "we will", "committed to", "next phase", "architectural", "goal", "finalized", "decision"]
+}
+
+def score_line(line):
+    for prefix in ("strategy:", "work:", "churn:"):
+        if line.strip().lower().startswith(prefix):
+            return 100, prefix.strip(":").upper()
+
+    scores = {"L1": 0, "L2": 0, "L3": 0}
+    for level, keywords in LEVEL_KEYWORDS.items():
+        scores[level] = sum(kw in line.lower() for kw in keywords)
+
+    best_level = max(scores, key=scores.get)
+    match_count = scores[best_level]
+
+    if match_count >= 2:
+        return 75, best_level
+    elif match_count == 1:
+        return 60, best_level
+    return 0, "UNCLASSIFIED"
+
+def classify_file(input_path):
+    with open(input_path, "r", encoding="utf-8") as f:
+        lines = f.readlines()
+
+    for i, line in enumerate(lines, start=1):
+        score, label = score_line(line)
+        if score > 0:
+            print(f"[{label}] ({score}) Line {i}: {line.strip()}")
+
+if __name__ == "__main__":
+    classify_file("sample_chat.txt")
