@@ -30,7 +30,7 @@ Modern human-AI collaboration often produces large volumes of valuable but noisy
 * Enables **efficient reloading of context**
 * Protects **intellectual property**
 
-The metaphor is intentional: a *mud room* is where we pause, sort, and clean before entering the living space. This protocol is that cognitive space.
+The metaphor is intentional: a *mud room* is where we pause, sort, and clean before and afterr venturing out on a random walk. This protocol is that cognitive space.
 
 ---
 
