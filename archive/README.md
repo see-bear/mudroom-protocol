@@ -1,20 +1,3 @@
----
-
-## 🧠 July 1, 2025 — Version 5 Release
-
-- ✨ Introduced `mudroom_sorter_v5.py`:
-  - Parses all `.txt` files in `batch_txts/`
-  - Extracts **latest date mentioned in the text** (not file metadata)
-  - Saves to `mudroom_logs/YYYY-MM-DD-filename-LX.md`
-  - Includes emoji-tagging (e.g. ✅ = L2, 🎯 = L3, 🐛 = L1, 🧠 = L3)
-- 🔁 Added `run_mudroom_sort_v5.bat` for Windows users
-- 📦 Added `requirements.txt` for clean setup
-
-Use case: drop your raw `.txt` logs in `batch_txts/`, double-click the `.bat`, and commit the outputs.
-
-
-June 30, 2025:
-
 # The Mud Room
 
 *A Human-AI Process for Meaningful Forgetting and Intentional Remembering*
@@ -30,7 +13,7 @@ Modern human-AI collaboration often produces large volumes of valuable but noisy
 * Enables **efficient reloading of context**
 * Protects **intellectual property**
 
-The metaphor is intentional: a *mud room* is where we pause, sort, and clean before and after venturing out on a random walk. This protocol is that cognitive space.
+The metaphor is intentional: a *mud room* is where we pause, sort, and clean before entering the living space. This protocol is that cognitive space.
 
 ---
 
@@ -245,35 +228,3 @@ def score_line(line, level_keywords):
 This scoring logic could be applied line-by-line or chunk-by-chunk to automatically split session logs into levels. Chunking would be further improved by using the **Conversational Parse Markers** described above.
 
 ---
-## ✅ Milestone – July 13, 2025
-
-### 🧠 Implemented AI-Sorted Session Archiving
-- Built and validated a `gpt_classifier_enhanced.py` Python script to classify chat transcripts into L1/L2/L3 using decision-aware heuristics
-- Added automatic extraction of TODOs and session summary (`session-load.txt`)
-- Output is saved in `mudroom_logs/YYYY-MM-DD/` with clean Markdown and YAML formats
-- Established permanent input/output directories:
-  - Input: `batch_txts`
-  - Output: `mudroom_logs`
-
-### 🛠️ Tools Added
-- `gpt_classifier_enhanced_batch.py` — scans entire folder, no args needed
-- `run_gpt_classifier_batch.bat` — double-click batch launcher for Windows CMD
-- Auto-generated:
-  - `L1.md` — technical details
-  - `L2.md` — freeze-dried wins
-  - `L3.md` — strategic decisions
-  - `todos.yaml`
-  - `session-load.txt`
-
-### 🧩 Logic Improvements
-- Decisions from either user or assistant are logged if mutually agreed
-- "Done" markers are used to populate L2
-- Strategy is inferred across message boundaries for better L3 parsing
-
----
-
-## 📌 Next Up
-- Improve summarization or compression of `L1.md`
-- Add Git versioned session logs (`.md`, `.yaml`, `.txt`) for rollback or team sharing
-- Optional: feed L2/L3 into next chat automatically via browser extension or Vite loader
-
