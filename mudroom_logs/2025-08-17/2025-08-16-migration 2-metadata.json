@@ -1,0 +1,44 @@
+{
+  "input_file": "batch_txts\\2025-08-16-migration 2.txt",
+  "generated_at": "2025-08-17T12:23:37.976112",
+  "config": {
+    "confidence_threshold": 0.6,
+    "min_block_size": 50,
+    "max_block_size": 2000,
+    "speaker_weight": 0.2,
+    "proximity_weight": 0.3,
+    "semantic_weight": 0.5,
+    "output_formats": [
+      "markdown",
+      "json",
+      "yaml"
+    ],
+    "enable_cross_references": true,
+    "enable_metadata_enrichment": true
+  },
+  "statistics": {
+    "L1": {
+      "count": 37,
+      "avg_confidence": 1.0260238034068332
+    },
+    "L2": {
+      "count": 39,
+      "avg_confidence": 1.1888530249024463
+    },
+    "L3": {
+      "count": 5,
+      "avg_confidence": 1.1792085916772486
+    }
+  },
+  "classifications": {
+    "L1": [
+      {
+        "confidence": 0.624986052364111,
+        "keywords": [
+          "debug",
+          "try"
+        ],
+        "speaker": null,
+        "timestamp": null,
+        "context": {
+          "semantic_score": 

@@ -1,0 +1,44 @@
+{
+  "input_file": "batch_txts\\2025-07-23-Network Connectivity Troubleshooting.txt",
+  "generated_at": "2025-08-17T12:50:05.109106",
+  "config": {
+    "confidence_threshold": 0.6,
+    "min_block_size": 50,
+    "max_block_size": 2000,
+    "speaker_weight": 0.2,
+    "proximity_weight": 0.3,
+    "semantic_weight": 0.5,
+    "output_formats": [
+      "markdown",
+      "json",
+      "yaml"
+    ],
+    "enable_cross_references": true,
+    "enable_metadata_enrichment": true
+  },
+  "statistics": {
+    "L1": {
+      "count": 24,
+      "avg_confidence": 0.9527470081876963
+    },
+    "L2": {
+      "count": 20,
+      "avg_confidence": 0.9690617059408686
+    },
+    "L3": {
+      "count": 9,
+      "avg_confidence": 1.206897521043817
+    }
+  },
+  "classifications": {
+    "L1": [
+      {
+        "confidence": 0.7125500351190567,
+        "keywords": [
+          "try",
+          "issue"
+        ],
+        "speaker": null,
+        "timestamp": "2025-07-23",
+        "context": {
+          "semantic_score": 

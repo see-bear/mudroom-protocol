@@ -1,0 +1,44 @@
+{
+  "input_file": "batch_txts\\2025-07-08 System Integration and C.txt",
+  "generated_at": "2025-08-17T12:48:48.317050",
+  "config": {
+    "confidence_threshold": 0.6,
+    "min_block_size": 50,
+    "max_block_size": 2000,
+    "speaker_weight": 0.2,
+    "proximity_weight": 0.3,
+    "semantic_weight": 0.5,
+    "output_formats": [
+      "markdown",
+      "json",
+      "yaml"
+    ],
+    "enable_cross_references": true,
+    "enable_metadata_enrichment": true
+  },
+  "statistics": {
+    "L1": {
+      "count": 19,
+      "avg_confidence": 1.0636979335868046
+    },
+    "L2": {
+      "count": 7,
+      "avg_confidence": 1.0489259170676979
+    },
+    "L3": {
+      "count": 1,
+      "avg_confidence": 1.0208651036024095
+    }
+  },
+  "classifications": {
+    "L1": [
+      {
+        "confidence": 0.6546161457896232,
+        "keywords": [
+          "try",
+          "temp"
+        ],
+        "speaker": null,
+        "timestamp": null,
+        "context": {
+          "semantic_score": 

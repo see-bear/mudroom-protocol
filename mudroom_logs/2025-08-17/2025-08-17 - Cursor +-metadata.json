@@ -1,0 +1,44 @@
+{
+  "input_file": "batch_txts\\2025-08-17 - Cursor +.txt",
+  "generated_at": "2025-08-17T14:24:02.311118",
+  "config": {
+    "confidence_threshold": 0.6,
+    "min_block_size": 50,
+    "max_block_size": 2000,
+    "speaker_weight": 0.2,
+    "proximity_weight": 0.3,
+    "semantic_weight": 0.5,
+    "output_formats": [
+      "markdown",
+      "json",
+      "yaml"
+    ],
+    "enable_cross_references": true,
+    "enable_metadata_enrichment": true
+  },
+  "statistics": {
+    "L1": {
+      "count": 16,
+      "avg_confidence": 1.1489326491668819
+    },
+    "L2": {
+      "count": 17,
+      "avg_confidence": 1.3632266515300555
+    },
+    "L3": {
+      "count": 1,
+      "avg_confidence": 2.38235801845789
+    }
+  },
+  "classifications": {
+    "L1": [
+      {
+        "confidence": 0.6491164959967136,
+        "keywords": [
+          "temp",
+          "return"
+        ],
+        "speaker": null,
+        "timestamp": null,
+        "context": {
+          "semantic_score": 
