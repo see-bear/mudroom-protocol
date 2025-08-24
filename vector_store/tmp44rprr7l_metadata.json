@@ -1,0 +1,18 @@
+[
+  {
+    "block_id": 0,
+    "classification": "L1",
+    "session_id": 0,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.0084405764341353
+  },
+  {
+    "block_id": 2,
+    "classification": "L3",
+    "session_id": 1,
+    "topic_shift": true,
+    "speaker_transition": null,
+    "confidence_score": 0.7170213937759399
+  }
+]

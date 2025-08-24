@@ -3,6 +3,9 @@
 from typing import List, Tuple
 import numpy as np
 from semantic_scorer import SemanticScorer
+import logging
+
+logger = logging.getLogger(__name__)
 
 class ContextAnalyzer:
     def __init__(self, embedding_model_name="all-MiniLM-L6-v2"):
@@ -33,13 +36,30 @@ class ContextAnalyzer:
 
     def get_block_embeddings(self, blocks: List[str]) -> List[np.ndarray]:
         """
-        Get embeddings for a list of text blocks.
+        Get embeddings for a list of text blocks using batch processing for speedup.
         """
-        embeddings = []
-        for block in blocks:
-            embedding = self.scorer.get_text_summary_embedding(block)
-            embeddings.append(embedding)
-        return embeddings
+        if not blocks:
+            return []
+        
+        # Use batch embedding for speedup
+        try:
+            embeddings = self.scorer.model.encode(blocks, batch_size=16, convert_to_tensor=True)
+            # Convert to numpy and store in cache
+            embeddings = embeddings.cpu().numpy()
+            
+            # Store in cache for reuse
+            for i, embedding in enumerate(embeddings):
+                self.scorer.block_embeddings[i] = embedding
+                
+            return embeddings.tolist()
+        except Exception as e:
+            # Fallback to individual embedding if batch fails
+            logger.warning(f"Batch embedding failed, falling back to individual: {e}")
+            embeddings = []
+            for block in blocks:
+                embedding = self.scorer.get_text_summary_embedding(block)
+                embeddings.append(embedding)
+            return embeddings
 
     def analyze_conversation_flow(self, blocks: List[str], speakers: List[str] = None) -> dict:
         """

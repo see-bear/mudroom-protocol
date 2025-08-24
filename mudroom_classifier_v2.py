@@ -16,6 +16,7 @@ from semantic_scorer import SemanticScorer
 from conversation_parser import ConversationParser
 from metadata_enricher import MetadataEnricher
 from context_analyzer import ContextAnalyzer
+from vector_store import save_vector_store
 
 
 def convert_numpy(obj):
@@ -201,6 +202,42 @@ class MudRoomClassifierV2:
         logger.info("Saving results...")
         self._save_results(results, output_dir, input_path)
         
+        # Save structured metadata
+        logger.info("Saving structured metadata...")
+        metadata_path = os.path.join(output_dir, datetime.now().strftime("%Y-%m-%d"), f"{os.path.splitext(os.path.basename(input_path))[0]}-classification_metadata.json")
+        os.makedirs(os.path.dirname(metadata_path), exist_ok=True)
+        self.metadata_enricher.save_json(metadata_path)
+        
+        # Save vector store for persistent embedding storage
+        logger.info("Saving vector store...")
+        file_id_stem = Path(input_path).stem.replace(" ", "_")
+        try:
+            # Get metadata and ensure it's JSON-safe
+            metadata_list = self.metadata_enricher.get_metadata()
+            # Ensure metadata is JSON-serializable by creating a safe copy
+            safe_metadata = []
+            for entry in metadata_list:
+                safe_entry = {
+                    "block_id": int(entry.get("block_id", 0)),
+                    "classification": str(entry.get("classification", "unknown")),
+                    "session_id": int(entry.get("session_id", 0)),
+                    "topic_shift": bool(entry.get("topic_shift", False)),
+                    "speaker_transition": str(entry.get("speaker_transition", "")) if entry.get("speaker_transition") else None,
+                    "confidence_score": float(entry.get("confidence_score", 0.0)) if entry.get("confidence_score") is not None else None
+                }
+                safe_metadata.append(safe_entry)
+            
+            vector_store_result = save_vector_store(
+                file_id=file_id_stem,
+                embeddings_dict=self.semantic_scorer.get_block_embeddings(),
+                metadata_list=safe_metadata,
+                filename=os.path.basename(input_path),
+                project="MudRoom"
+            )
+            logger.info(f"Vector store saved: {vector_store_result['embeddings_count']} embeddings, {vector_store_result['metadata_count']} metadata entries")
+        except Exception as e:
+            logger.warning(f"Failed to save vector store: {e}")
+        
         logger.info(f"Classification complete for: {input_path}")
         return results
 
@@ -256,6 +293,29 @@ class MudRoomClassifierV2:
             block.text, best_level, final_scores[best_level]
         )
         
+        # Get context information for metadata enrichment
+        session_id = context_analysis["session_ids"][block_index] if block_index < len(context_analysis["session_ids"]) else 0
+        topic_shift = context_analysis["topic_shifts"][block_index] if block_index < len(context_analysis["topic_shifts"]) else False
+        
+        # Determine speaker transition
+        speaker_transition = None
+        if "speaker_analysis" in context_analysis and context_analysis["speaker_analysis"]:
+            speaker_transitions = context_analysis["speaker_analysis"].get("speaker_transitions", [])
+            for transition in speaker_transitions:
+                if transition["position"] == block_index:
+                    speaker_transition = f"{transition['from']}→{transition['to']}"
+                    break
+        
+        # Enrich metadata
+        self.metadata_enricher.enrich(
+            block_id=block_index,
+            classification=best_level,
+            session_id=session_id,
+            topic_shift=topic_shift,
+            speaker_transition=speaker_transition,
+            confidence=confidence
+        )
+        
         return ClassificationResult(
             text=block.text,
             level=best_level,
@@ -267,8 +327,8 @@ class MudRoomClassifierV2:
                 "speaker_adjustment": speaker_adjustment.get(best_level, 0.0),
                 "context_adjustment": context_adjustment.get(best_level, 0.0),
                 "block_size": len(block.text),
-                "session_id": context_analysis["session_ids"][block_index] if block_index < len(context_analysis["session_ids"]) else 0,
-                "topic_shift": context_analysis["topic_shifts"][block_index] if block_index < len(context_analysis["topic_shifts"]) else False,
+                "session_id": session_id,
+                "topic_shift": topic_shift,
                 "line_numbers": block.line_numbers,
                 "speaker": block.speaker,
                 "timestamp": block.timestamp
@@ -464,6 +524,35 @@ class MudRoomClassifierV2:
         
         return contributing[:5]  # Limit to top 5 contributing keywords
     
+    def _create_safe_context(self, context: Dict[str, Any]) -> Dict[str, Any]:
+        """
+        Create a safe copy of context to prevent circular references
+        
+        Args:
+            context: Context dictionary
+            
+        Returns:
+            Safe copy of context
+        """
+        if not context:
+            return {}
+        
+        try:
+            safe_context = {}
+            for key, value in context.items():
+                if isinstance(value, (str, int, float, bool)) or value is None:
+                    safe_context[key] = value
+                elif isinstance(value, list):
+                    safe_context[key] = [str(item) for item in value]
+                elif isinstance(value, dict):
+                    safe_context[key] = {k: str(v) for k, v in value.items()}
+                else:
+                    safe_context[key] = str(value)
+            return safe_context
+        except Exception as e:
+            logger.warning(f"Failed to create safe context: {e}")
+            return {"error": "Failed to serialize context"}
+    
     def _group_by_level(self, classifications: List[ClassificationResult]) -> Dict[str, List[ClassificationResult]]:
         """Group classification results by level"""
         grouped = {"L1": [], "L2": [], "L3": []}
@@ -514,34 +603,50 @@ class MudRoomClassifierV2:
     def _save_metadata(self, path: str, results: Dict[str, List[ClassificationResult]], 
                       input_path: str):
         """Save detailed metadata as JSON"""
-        metadata = {
-            "input_file": input_path,
-            "generated_at": datetime.now().isoformat(),
-            "config": self.config,
-            "statistics": {
-                level: {
-                    "count": len(classifications),
-                    "avg_confidence": sum(r.confidence for r in classifications) / len(classifications) if classifications else 0.0
-                }
-                for level, classifications in results.items()
-            },
-            "classifications": {
-                level: [
-                    {
-                        "confidence": r.confidence,
-                        "keywords": r.keywords,
-                        "speaker": r.speaker,
-                        "timestamp": r.timestamp,
-                        "context": r.context
+        try:
+            metadata = {
+                "input_file": input_path,
+                "generated_at": datetime.now().isoformat(),
+                "config": self.config,
+                "statistics": {
+                    level: {
+                        "count": len(classifications),
+                        "avg_confidence": sum(r.confidence for r in classifications) / len(classifications) if classifications else 0.0
                     }
-                    for r in classifications
-                ]
-                for level, classifications in results.items()
+                    for level, classifications in results.items()
+                },
+                "classifications": {
+                    level: [
+                        {
+                            "confidence": r.confidence,
+                            "keywords": r.keywords,
+                            "speaker": r.speaker,
+                            "timestamp": r.timestamp,
+                            "context": self._create_safe_context(r.context)
+                        }
+                        for r in classifications
+                    ]
+                    for level, classifications in results.items()
+                }
             }
-        }
-        
-        with open(path, 'w', encoding='utf-8') as f:
-            json.dump(metadata, f, indent=2, default=convert_numpy)
+            
+            with open(path, 'w', encoding='utf-8') as f:
+                json.dump(metadata, f, indent=2, default=convert_numpy)
+                
+        except Exception as e:
+            logger.error(f"Failed to save metadata: {e}")
+            # Create a minimal safe version
+            safe_metadata = {
+                "input_file": input_path,
+                "generated_at": datetime.now().isoformat(),
+                "error": f"Failed to save full metadata: {str(e)}",
+                "statistics": {
+                    level: {"count": len(classifications)}
+                    for level, classifications in results.items()
+                }
+            }
+            with open(path, 'w', encoding='utf-8') as f:
+                json.dump(safe_metadata, f, indent=2, default=convert_numpy)
 
 
 if __name__ == "__main__":

@@ -1,0 +1,19 @@
+{
+  "metadata": {
+    "generated_at": "2025-08-23T22:50:57.619772",
+    "timestamp": "2025-08-24"
+  },
+  "summary": {
+    "total_entries": 4,
+    "l3_count": 4,
+    "l2_count": 0,
+    "avg_confidence": 0.8899999999999999,
+    "avg_cluster_size": 1.0
+  },
+  "projects": {
+    "Unknown": 4
+  },
+  "files": {
+    "Unknown": 4
+  }
+}

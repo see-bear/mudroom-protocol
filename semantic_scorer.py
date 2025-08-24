@@ -32,6 +32,9 @@ class SemanticScorer:
             logger.warning(f"Failed to load sentence transformer model: {e}")
             logger.info("Falling back to simple keyword matching")
             self.model = None
+        
+        # Cache for block embeddings to avoid recomputation
+        self.block_embeddings = {}
     
     def score_text(self, text: str, keywords: Dict[str, Dict[str, Any]]) -> Dict[str, float]:
         """
@@ -54,7 +57,45 @@ class SemanticScorer:
             scores[level] = level_score
         
         return scores
-    
+
+    def score_text_batch(self, texts: List[str], keywords: Dict[str, Dict[str, Any]]) -> List[Dict[str, float]]:
+        """
+        Score multiple texts against each level's keyword clusters using batch embedding
+        
+        Args:
+            texts: List of texts to score
+            keywords: Dictionary of level -> keyword data with clusters
+            
+        Returns:
+            List of dictionaries with level -> similarity score (0.0 to 1.0)
+        """
+        if not self.model:
+            return [self._fallback_scoring(text, keywords) for text in texts]
+        
+        # Batch embed all texts at once for speedup
+        try:
+            embeddings = self.model.encode(texts, batch_size=16, convert_to_tensor=True)
+            # Convert to numpy for compatibility
+            embeddings = embeddings.cpu().numpy()
+        except Exception as e:
+            logger.warning(f"Batch embedding failed, falling back to individual: {e}")
+            return [self.score_text(text, keywords) for text in texts]
+        
+        # Store embeddings in cache for reuse
+        for i, embedding in enumerate(embeddings):
+            self.block_embeddings[i] = embedding
+        
+        # Score each text using precomputed embeddings
+        results = []
+        for i, (text, embedding) in enumerate(zip(texts, embeddings)):
+            scores = {}
+            for level, level_data in keywords.items():
+                level_score = self._score_against_level_with_embedding(embedding, level_data)
+                scores[level] = level_score
+            results.append(scores)
+        
+        return results
+
     def _score_against_level(self, text: str, level_data: Dict[str, Any]) -> float:
         """
         Score text against a specific level's keyword clusters
@@ -69,8 +110,90 @@ class SemanticScorer:
         if not level_data.get("clusters"):
             return 0.0
         
+        # Check if we have a cached embedding for this text
+        # For now, we'll compute the embedding, but in the future we could hash the text
+        # and use that as a cache key for individual text scoring
+        
         # Get embeddings for the text
         text_embedding = self.model.encode([text])[0]
+        
+        # Score against each cluster
+        cluster_scores = []
+        
+        for cluster_name, cluster_keywords in level_data["clusters"].items():
+            if not cluster_keywords:
+                continue
+            
+            # Create cluster representation (average of keyword embeddings)
+            cluster_embeddings = self.model.encode(cluster_keywords)
+            cluster_embedding = np.mean(cluster_embeddings, axis=0)
+            
+            # Calculate cosine similarity
+            similarity = self._cosine_similarity(text_embedding, cluster_embedding)
+            cluster_scores.append(similarity)
+        
+        # Return the maximum cluster score for this level
+        return max(cluster_scores) if cluster_scores else 0.0
+
+    def get_cached_embedding(self, block_index: int) -> Optional[np.ndarray]:
+        """
+        Get a cached embedding for a block index
+        
+        Args:
+            block_index: Index of the block
+            
+        Returns:
+            Cached embedding or None if not found
+        """
+        return self.block_embeddings.get(block_index)
+
+    def clear_cache(self):
+        """Clear the block embeddings cache"""
+        self.block_embeddings.clear()
+        logger.info("Block embeddings cache cleared")
+
+    def get_cache_size(self) -> int:
+        """Get the number of cached embeddings"""
+        return len(self.block_embeddings)
+
+    def get_block_embeddings(self) -> Dict[int, np.ndarray]:
+        """
+        Get all cached block embeddings
+        
+        Returns:
+            Dictionary mapping block index to embedding array
+        """
+        return self.block_embeddings.copy()
+
+    def has_cached_embedding(self, block_index: int) -> bool:
+        """
+        Check if a block embedding is cached
+        
+        Args:
+            block_index: Index of the block
+            
+        Returns:
+            True if embedding is cached
+        """
+        return block_index in self.block_embeddings
+
+    def get_cached_embeddings_count(self) -> int:
+        """Get the total number of cached embeddings"""
+        return len(self.block_embeddings)
+
+    def _score_against_level_with_embedding(self, text_embedding: np.ndarray, level_data: Dict[str, Any]) -> float:
+        """
+        Score precomputed text embedding against a specific level's keyword clusters
+        
+        Args:
+            text_embedding: Precomputed text embedding
+            level_data: Keyword data for the level including clusters
+            
+        Returns:
+            Similarity score (0.0 to 1.0)
+        """
+        if not level_data.get("clusters"):
+            return 0.0
         
         # Score against each cluster
         cluster_scores = []

@@ -1,0 +1,46 @@
+{
+  "metadata": {
+    "generated_at": "2025-08-23T22:50:57.618762",
+    "timestamp": "2025-08-24",
+    "total_entries": 4,
+    "similarity_threshold": 0.85,
+    "focus_levels": [
+      "L3"
+    ],
+    "min_confidence": 0.7
+  },
+  "entries": [
+    {
+      "block_id": 8,
+      "classification": "L3",
+      "session_id": 2,
+      "topic_shift": false,
+      "speaker_transition": "User→AI",
+      "confidence_score": 0.86
+    },
+    {
+      "block_id": 9,
+      "classification": "L3",
+      "session_id": 3,
+      "topic_shift": true,
+      "speaker_transition": null,
+      "confidence_score": 0.8799999999999999
+    },
+    {
+      "block_id": 10,
+      "classification": "L3",
+      "session_id": 3,
+      "topic_shift": false,
+      "speaker_transition": "User→AI",
+      "confidence_score": 0.8999999999999999
+    },
+    {
+      "block_id": 11,
+      "classification": "L3",
+      "session_id": 3,
+      "topic_shift": false,
+      "speaker_transition": null,
+      "confidence_score": 0.9199999999999999
+    }
+  ]
+}

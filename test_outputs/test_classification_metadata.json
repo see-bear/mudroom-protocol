@@ -1,0 +1,98 @@
+[
+  {
+    "block_id": 0,
+    "classification": "L1",
+    "session_id": 0,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.6344613482017217
+  },
+  {
+    "block_id": 1,
+    "classification": "L3",
+    "session_id": 0,
+    "topic_shift": false,
+    "speaker_transition": "User\u2192AI",
+    "confidence_score": 0.8346703042770963
+  },
+  {
+    "block_id": 2,
+    "classification": "L1",
+    "session_id": 0,
+    "topic_shift": false,
+    "speaker_transition": "AI\u2192User",
+    "confidence_score": 0.7852831686872912
+  },
+  {
+    "block_id": 3,
+    "classification": "L2",
+    "session_id": 1,
+    "topic_shift": true,
+    "speaker_transition": null,
+    "confidence_score": 0.6145708103214195
+  },
+  {
+    "block_id": 4,
+    "classification": "L3",
+    "session_id": 2,
+    "topic_shift": true,
+    "speaker_transition": "User\u2192AI",
+    "confidence_score": 0.6782419025476627
+  },
+  {
+    "block_id": 5,
+    "classification": "L2",
+    "session_id": 2,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.7368666527622467
+  },
+  {
+    "block_id": 6,
+    "classification": "L1",
+    "session_id": 3,
+    "topic_shift": true,
+    "speaker_transition": "AI\u2192User",
+    "confidence_score": 0.9359719282677947
+  },
+  {
+    "block_id": 7,
+    "classification": "L2",
+    "session_id": 3,
+    "topic_shift": false,
+    "speaker_transition": "User\u2192AI",
+    "confidence_score": 0.7679680211985771
+  },
+  {
+    "block_id": 8,
+    "classification": "L3",
+    "session_id": 3,
+    "topic_shift": false,
+    "speaker_transition": "AI\u2192User",
+    "confidence_score": 0.7446014908115248
+  },
+  {
+    "block_id": 9,
+    "classification": "L2",
+    "session_id": 4,
+    "topic_shift": true,
+    "speaker_transition": null,
+    "confidence_score": 0.746163550315857
+  },
+  {
+    "block_id": 10,
+    "classification": "L1",
+    "session_id": 4,
+    "topic_shift": false,
+    "speaker_transition": "User\u2192AI",
+    "confidence_score": 0.803738751823085
+  },
+  {
+    "block_id": 11,
+    "classification": "L2",
+    "session_id": 5,
+    "topic_shift": true,
+    "speaker_transition": "AI\u2192User",
+    "confidence_score": 0.6816326303070971
+  }
+]

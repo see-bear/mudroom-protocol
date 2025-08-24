@@ -1,0 +1,98 @@
+[
+  {
+    "block_id": 0,
+    "classification": "L1",
+    "session_id": 0,
+    "topic_shift": true,
+    "speaker_transition": "User→AI",
+    "confidence_score": 0.7
+  },
+  {
+    "block_id": 1,
+    "classification": "L1",
+    "session_id": 0,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.72
+  },
+  {
+    "block_id": 2,
+    "classification": "L1",
+    "session_id": 0,
+    "topic_shift": false,
+    "speaker_transition": "User→AI",
+    "confidence_score": 0.74
+  },
+  {
+    "block_id": 3,
+    "classification": "L1",
+    "session_id": 1,
+    "topic_shift": true,
+    "speaker_transition": null,
+    "confidence_score": 0.76
+  },
+  {
+    "block_id": 4,
+    "classification": "L2",
+    "session_id": 1,
+    "topic_shift": false,
+    "speaker_transition": "User→AI",
+    "confidence_score": 0.7799999999999999
+  },
+  {
+    "block_id": 5,
+    "classification": "L2",
+    "session_id": 1,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.7999999999999999
+  },
+  {
+    "block_id": 6,
+    "classification": "L2",
+    "session_id": 2,
+    "topic_shift": true,
+    "speaker_transition": "User→AI",
+    "confidence_score": 0.82
+  },
+  {
+    "block_id": 7,
+    "classification": "L2",
+    "session_id": 2,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.84
+  },
+  {
+    "block_id": 8,
+    "classification": "L3",
+    "session_id": 2,
+    "topic_shift": false,
+    "speaker_transition": "User→AI",
+    "confidence_score": 0.86
+  },
+  {
+    "block_id": 9,
+    "classification": "L3",
+    "session_id": 3,
+    "topic_shift": true,
+    "speaker_transition": null,
+    "confidence_score": 0.8799999999999999
+  },
+  {
+    "block_id": 10,
+    "classification": "L3",
+    "session_id": 3,
+    "topic_shift": false,
+    "speaker_transition": "User→AI",
+    "confidence_score": 0.8999999999999999
+  },
+  {
+    "block_id": 11,
+    "classification": "L3",
+    "session_id": 3,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.9199999999999999
+  }
+]

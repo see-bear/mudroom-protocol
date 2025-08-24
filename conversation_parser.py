@@ -44,36 +44,36 @@ class ConversationParser:
         self.max_block_size = max_block_size
         self.semantic_scorer = SemanticScorer()
         
-        # Patterns for detecting conversation structure
+        # Pre-compile regex patterns for performance
         self.speaker_patterns = [
-            r'^(You said:|ChatGPT said:|User:|Assistant:|AI:)',
-            r'^([A-Z][a-z]+ said:)',
-            r'^(Human:|Bot:)'
+            re.compile(r'^(You said:|ChatGPT said:|User:|Assistant:|AI:)', re.IGNORECASE),
+            re.compile(r'^([A-Z][a-z]+ said:)', re.IGNORECASE),
+            re.compile(r'^(Human:|Bot:)', re.IGNORECASE)
         ]
         
         self.timestamp_patterns = [
-            r'(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})',
-            r'(\d{2}:\d{2}:\d{2})',
-            r'(\d{4}-\d{2}-\d{2})'
+            re.compile(r'(\d{4}-\d{2}-\d{2} \d{2}:\d{2}:\d{2})'),
+            re.compile(r'(\d{2}:\d{2}:\d{2})'),
+            re.compile(r'(\d{4}-\d{2}-\d{2})')
         ]
         
         self.context_shift_patterns = [
-            r'(by the way|so anyway|moving on|next topic|speaking of)',
-            r'(I\'m back|let\'s continue|resuming|back to)',
-            r'(new goal:|next task:|new objective:)',
-            r'(sleep well|signing off|goodbye|end session)'
+            re.compile(r'(by the way|so anyway|moving on|next topic|speaking of)', re.IGNORECASE),
+            re.compile(r'(I\'m back|let\'s continue|resuming|back to)', re.IGNORECASE),
+            re.compile(r'(new goal:|next task:|new objective:)', re.IGNORECASE),
+            re.compile(r'(sleep well|signing off|goodbye|end session)', re.IGNORECASE)
         ]
         
         self.decision_patterns = [
-            r'(we will|we\'ve decided|going forward|committed to)',
-            r'(final choice|decision made|settled on)',
-            r'(strategy:|vision:|direction:)'
+            re.compile(r'(we will|we\'ve decided|going forward|committed to)', re.IGNORECASE),
+            re.compile(r'(final choice|decision made|settled on)', re.IGNORECASE),
+            re.compile(r'(strategy:|vision:|direction:)', re.IGNORECASE)
         ]
         
         self.question_patterns = [
-            r'\?$',  # Ends with question mark
-            r'(can you|could you|would you|how do|what is|why does)',
-            r'(I wonder|I\'m curious|let me ask)'
+            re.compile(r'\?$'),  # Ends with question mark
+            re.compile(r'(can you|could you|would you|how do|what is|why does)', re.IGNORECASE),
+            re.compile(r'(I wonder|I\'m curious|let me ask)', re.IGNORECASE)
         ]
     
     def parse_conversation(self, file_path: str) -> List[ConversationBlock]:
@@ -86,9 +86,121 @@ class ConversationParser:
         Returns:
             List of conversation blocks
         """
+        logger.info(f"Starting to parse conversation file: {file_path}")
+        
         with open(file_path, 'r', encoding='utf-8') as f:
             lines = f.readlines()
         
+        logger.info(f"Loaded {len(lines)} lines from file")
+        
+        # For very large files, use optimized parsing
+        if len(lines) > 10000:
+            logger.info("Large file detected, using optimized parsing strategy")
+            return self._parse_large_file(lines)
+        else:
+            # Use standard parsing for smaller files
+            return self._parse_standard(lines)
+    
+    def _parse_large_file(self, lines: List[str]) -> List[ConversationBlock]:
+        """
+        Optimized parsing for large files (>10,000 lines)
+        """
+        logger.info("Using optimized parsing for large file")
+        
+        blocks = []
+        current_block_lines = []
+        current_speaker = None
+        current_timestamp = None
+        line_count = 0
+        skipped_lines = 0
+        
+        # Pre-filter: remove empty lines and count them
+        filtered_lines = []
+        for line in lines:
+            stripped = line.strip()
+            if stripped:
+                filtered_lines.append(stripped)
+            else:
+                skipped_lines += 1
+        
+        logger.info(f"Pre-filtered: {len(lines)} → {len(filtered_lines)} lines (skipped {skipped_lines} empty lines)")
+        
+        # Process lines in batches for better performance
+        batch_size = 1000
+        total_batches = (len(filtered_lines) + batch_size - 1) // batch_size
+        
+        for batch_num in range(total_batches):
+            start_idx = batch_num * batch_size
+            end_idx = min(start_idx + batch_size, len(filtered_lines))
+            batch_lines = filtered_lines[start_idx:end_idx]
+            
+            logger.info(f"Processing batch {batch_num + 1}/{total_batches} (lines {start_idx + 1}-{end_idx})")
+            
+            for i, line in enumerate(batch_lines):
+                line_num = start_idx + i + 1
+                
+                # Ultra-fast speaker detection using string operations first
+                speaker = self._ultra_fast_speaker_detect(line)
+                timestamp = self._ultra_fast_timestamp_detect(line)
+                
+                # Check if we should start a new block
+                should_start_new = (
+                    speaker and speaker != current_speaker or
+                    timestamp or
+                    len(' '.join(current_block_lines)) > self.max_block_size or
+                    self._ultra_fast_context_shift_detect(line)
+                )
+                
+                if should_start_new and current_block_lines:
+                    # Create block from accumulated lines
+                    block_text = ' '.join(current_block_lines)
+                    if len(block_text.strip()) >= self.min_block_size:
+                        block = ConversationBlock(
+                            text=block_text,
+                            speaker=current_speaker,
+                            timestamp=current_timestamp,
+                            line_numbers=list(range(line_count - len(current_block_lines) + 1, line_count + 1))
+                        )
+                        blocks.append(block)
+                    
+                    # Start new block
+                    current_block_lines = []
+                    current_speaker = speaker
+                    current_timestamp = timestamp
+                
+                # Add line to current block
+                if speaker:
+                    # Remove speaker prefix from content using string operations
+                    content = self._remove_speaker_prefix(line, speaker)
+                    current_block_lines.append(content)
+                else:
+                    current_block_lines.append(line)
+                
+                line_count += 1
+                
+                # Progress logging for very large files
+                if line_count % 5000 == 0:
+                    logger.info(f"Processed {line_count}/{len(filtered_lines)} lines, created {len(blocks)} blocks")
+        
+        # Create final block
+        if current_block_lines:
+            block_text = ' '.join(current_block_lines)
+            if len(block_text.strip()) >= self.min_block_size:
+                block = ConversationBlock(
+                    text=block_text,
+                    speaker=current_speaker,
+                    timestamp=current_timestamp,
+                    line_numbers=list(range(line_count - len(current_block_lines) + 1, line_count + 1))
+                )
+                blocks.append(block)
+        
+        logger.info(f"Optimized parsing complete: {len(lines)} lines → {len(blocks)} blocks (skipped {skipped_lines} empty lines)")
+        return blocks
+    
+    def _parse_standard(self, lines: List[str]) -> List[ConversationBlock]:
+        """
+        Standard parsing for smaller files
+        """
         # First pass: identify speakers and timestamps
         parsed_lines = self._parse_lines(lines)
         
@@ -98,7 +210,7 @@ class ConversationParser:
         # Third pass: merge similar blocks and split large ones
         blocks = self._optimize_blocks(blocks)
         
-        logger.info(f"Parsed {len(lines)} lines into {len(blocks)} conversation blocks")
+        logger.info(f"Standard parsing complete: {len(lines)} lines → {len(blocks)} blocks")
         return blocks
     
     def _parse_lines(self, lines: List[str]) -> List[Dict[str, Any]]:
@@ -129,7 +241,7 @@ class ConversationParser:
             
             # Extract speaker
             for pattern in self.speaker_patterns:
-                match = re.match(pattern, line, re.IGNORECASE)
+                match = pattern.match(line)
                 if match:
                     parsed_line['speaker'] = match.group(1).rstrip(':').strip()
                     parsed_line['content'] = line[match.end():].strip()
@@ -137,7 +249,7 @@ class ConversationParser:
             
             # Extract timestamp
             for pattern in self.timestamp_patterns:
-                match = re.search(pattern, line)
+                match = pattern.search(line)
                 if match:
                     parsed_line['timestamp'] = match.group(1)
                     break
@@ -163,17 +275,17 @@ class ConversationParser:
         
         # Check for decisions
         for pattern in self.decision_patterns:
-            if re.search(pattern, content_lower):
+            if pattern.search(content_lower):
                 return "decision"
         
         # Check for questions
         for pattern in self.question_patterns:
-            if re.search(pattern, content_lower):
+            if pattern.search(content_lower):
                 return "question"
         
         # Check for context shifts
         for pattern in self.context_shift_patterns:
-            if re.search(pattern, content_lower):
+            if pattern.search(content_lower):
                 return "context_shift"
         
         return "general"
@@ -455,6 +567,95 @@ class ConversationParser:
         )
         
         return similarity > 0.7  # High similarity threshold for merging
+    
+    def _ultra_fast_speaker_detect(self, line: str) -> Optional[str]:
+        """
+        Ultra-fast speaker detection using string operations first
+        """
+        # Check most common patterns using string operations (faster than regex)
+        if line.startswith('You said:'):
+            return 'You'
+        elif line.startswith('ChatGPT said:'):
+            return 'ChatGPT'
+        elif line.startswith('User:'):
+            return 'User'
+        elif line.startswith('Assistant:'):
+            return 'Assistant'
+        elif line.startswith('AI:'):
+            return 'AI'
+        elif line.startswith('Human:'):
+            return 'Human'
+        elif line.startswith('Bot:'):
+            return 'Bot'
+        
+        # Fallback to regex for less common patterns
+        for pattern in self.speaker_patterns:
+            match = pattern.match(line)
+            if match:
+                return match.group(1).rstrip(':').strip()
+        
+        return None
+    
+    def _ultra_fast_timestamp_detect(self, line: str) -> Optional[str]:
+        """
+        Ultra-fast timestamp detection using string operations first
+        """
+        # Quick string checks for common timestamp patterns
+        if '2025-' in line or '2024-' in line:
+            # Look for full datetime pattern
+            for pattern in self.timestamp_patterns:
+                match = pattern.search(line)
+                if match:
+                    return match.group(1)
+        elif ':' in line and len(line) >= 8:
+            # Look for time-only pattern
+            parts = line.split()
+            for part in parts:
+                if ':' in part and len(part) == 8 and part.count(':') == 2:
+                    try:
+                        # Validate it's actually a time
+                        hour, minute, second = part.split(':')
+                        if 0 <= int(hour) <= 23 and 0 <= int(minute) <= 59 and 0 <= int(second) <= 59:
+                            return part
+                    except (ValueError, IndexError):
+                        continue
+        
+        return None
+    
+    def _ultra_fast_context_shift_detect(self, line: str) -> bool:
+        """
+        Ultra-fast context shift detection using string operations
+        """
+        line_lower = line.lower()
+        
+        # Most common context shift phrases
+        if any(phrase in line_lower for phrase in [
+            'by the way', 'so anyway', 'moving on', 'next topic',
+            'I\'m back', 'let\'s continue', 'new goal:', 'next task:'
+        ]):
+            return True
+        
+        return False
+    
+    def _remove_speaker_prefix(self, line: str, speaker: str) -> str:
+        """
+        Remove speaker prefix from line using string operations
+        """
+        if not speaker:
+            return line
+        
+        # Common speaker prefixes
+        prefixes = [
+            f"{speaker}:",
+            f"{speaker} said:",
+            f"{speaker} says:"
+        ]
+        
+        for prefix in prefixes:
+            if line.startswith(prefix):
+                return line[len(prefix):].strip()
+        
+        return line
 
 
 if __name__ == "__main__":

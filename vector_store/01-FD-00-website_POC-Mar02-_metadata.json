@@ -1,0 +1,3346 @@
+[
+  {
+    "block_id": 14,
+    "classification": "L1",
+    "session_id": 6,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.639701948389411
+  },
+  {
+    "block_id": 15,
+    "classification": "L1",
+    "session_id": 7,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.9771334320306777
+  },
+  {
+    "block_id": 19,
+    "classification": "L2",
+    "session_id": 8,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6032302038371563
+  },
+  {
+    "block_id": 23,
+    "classification": "L1",
+    "session_id": 10,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0415906056761741
+  },
+  {
+    "block_id": 25,
+    "classification": "L2",
+    "session_id": 11,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.9542152151092886
+  },
+  {
+    "block_id": 26,
+    "classification": "L3",
+    "session_id": 11,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.1587278236448764
+  },
+  {
+    "block_id": 27,
+    "classification": "L3",
+    "session_id": 11,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.4365135622769594
+  },
+  {
+    "block_id": 42,
+    "classification": "L1",
+    "session_id": 16,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.674433386772871
+  },
+  {
+    "block_id": 43,
+    "classification": "L1",
+    "session_id": 17,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.7293196430802346
+  },
+  {
+    "block_id": 46,
+    "classification": "L2",
+    "session_id": 18,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6616216687113047
+  },
+  {
+    "block_id": 49,
+    "classification": "L2",
+    "session_id": 19,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6363688997086138
+  },
+  {
+    "block_id": 55,
+    "classification": "L1",
+    "session_id": 22,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6777167972829193
+  },
+  {
+    "block_id": 61,
+    "classification": "L1",
+    "session_id": 25,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7453045028448105
+  },
+  {
+    "block_id": 63,
+    "classification": "L2",
+    "session_id": 27,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0183584052324295
+  },
+  {
+    "block_id": 67,
+    "classification": "L1",
+    "session_id": 28,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.648348695486784
+  },
+  {
+    "block_id": 69,
+    "classification": "L1",
+    "session_id": 28,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6889716190099716
+  },
+  {
+    "block_id": 70,
+    "classification": "L1",
+    "session_id": 28,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.6972593542933464
+  },
+  {
+    "block_id": 71,
+    "classification": "L1",
+    "session_id": 28,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 0.6576600916683674
+  },
+  {
+    "block_id": 73,
+    "classification": "L1",
+    "session_id": 28,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0239409725368023
+  },
+  {
+    "block_id": 75,
+    "classification": "L2",
+    "session_id": 30,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7191513146460057
+  },
+  {
+    "block_id": 83,
+    "classification": "L1",
+    "session_id": 35,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.2008274570703505
+  },
+  {
+    "block_id": 85,
+    "classification": "L1",
+    "session_id": 36,
+    "topic_shift": true,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.2003913894891738
+  },
+  {
+    "block_id": 86,
+    "classification": "L1",
+    "session_id": 37,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.737658049762249
+  },
+  {
+    "block_id": 87,
+    "classification": "L1",
+    "session_id": 37,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7218624952435494
+  },
+  {
+    "block_id": 97,
+    "classification": "L2",
+    "session_id": 37,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.7414262703061104
+  },
+  {
+    "block_id": 107,
+    "classification": "L2",
+    "session_id": 37,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.7450208699703217
+  },
+  {
+    "block_id": 113,
+    "classification": "L2",
+    "session_id": 37,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.7488636708259583
+  },
+  {
+    "block_id": 123,
+    "classification": "L2",
+    "session_id": 37,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.7501441052556038
+  },
+  {
+    "block_id": 124,
+    "classification": "L1",
+    "session_id": 37,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.0444034594297409
+  },
+  {
+    "block_id": 125,
+    "classification": "L1",
+    "session_id": 37,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 1.4309553475737573
+  },
+  {
+    "block_id": 126,
+    "classification": "L1",
+    "session_id": 37,
+    "topic_shift": false,
+    "speaker_transition": "None→You",
+    "confidence_score": 0.7474712094664574
+  },
+  {
+    "block_id": 127,
+    "classification": "L1",
+    "session_id": 37,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0501606199145317
+  },
+  {
+    "block_id": 136,
+    "classification": "L1",
+    "session_id": 38,
+    "topic_shift": true,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.0554397064447403
+  },
+  {
+    "block_id": 137,
+    "classification": "L1",
+    "session_id": 38,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.7795628088712693
+  },
+  {
+    "block_id": 138,
+    "classification": "L1",
+    "session_id": 38,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 2.0111590906381607
+  },
+  {
+    "block_id": 156,
+    "classification": "L1",
+    "session_id": 40,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.0447995546460151
+  },
+  {
+    "block_id": 157,
+    "classification": "L1",
+    "session_id": 40,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.7145031391084194
+  },
+  {
+    "block_id": 158,
+    "classification": "L1",
+    "session_id": 40,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.6371345461308957
+  },
+  {
+    "block_id": 160,
+    "classification": "L1",
+    "session_id": 42,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.321194839090109
+  },
+  {
+    "block_id": 162,
+    "classification": "L1",
+    "session_id": 44,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.9861122093498706
+  },
+  {
+    "block_id": 166,
+    "classification": "L1",
+    "session_id": 45,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0019426453113556
+  },
+  {
+    "block_id": 167,
+    "classification": "L1",
+    "session_id": 45,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.7331644709408284
+  },
+  {
+    "block_id": 170,
+    "classification": "L1",
+    "session_id": 46,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.8807993872463703
+  },
+  {
+    "block_id": 172,
+    "classification": "L1",
+    "session_id": 46,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.3051562651246786
+  },
+  {
+    "block_id": 181,
+    "classification": "L2",
+    "session_id": 52,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6529937333613635
+  },
+  {
+    "block_id": 183,
+    "classification": "L2",
+    "session_id": 53,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.678741335272789
+  },
+  {
+    "block_id": 185,
+    "classification": "L2",
+    "session_id": 53,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.9920135350525379
+  },
+  {
+    "block_id": 189,
+    "classification": "L1",
+    "session_id": 53,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.9889722406119108
+  },
+  {
+    "block_id": 192,
+    "classification": "L2",
+    "session_id": 53,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.588624325543642
+  },
+  {
+    "block_id": 193,
+    "classification": "L1",
+    "session_id": 53,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.9535885132849216
+  },
+  {
+    "block_id": 194,
+    "classification": "L2",
+    "session_id": 53,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.5250206510722637
+  },
+  {
+    "block_id": 196,
+    "classification": "L2",
+    "session_id": 53,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.7800003881752491
+  },
+  {
+    "block_id": 198,
+    "classification": "L1",
+    "session_id": 54,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.063427980542183
+  },
+  {
+    "block_id": 204,
+    "classification": "L1",
+    "session_id": 54,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 1.2730760691463947
+  },
+  {
+    "block_id": 206,
+    "classification": "L1",
+    "session_id": 55,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6649345149099827
+  },
+  {
+    "block_id": 207,
+    "classification": "L1",
+    "session_id": 55,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 1.2968031024336815
+  },
+  {
+    "block_id": 208,
+    "classification": "L2",
+    "session_id": 55,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 0.7108122178912163
+  },
+  {
+    "block_id": 211,
+    "classification": "L1",
+    "session_id": 57,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.0130252940952778
+  },
+  {
+    "block_id": 212,
+    "classification": "L1",
+    "session_id": 57,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.3119614969193936
+  },
+  {
+    "block_id": 214,
+    "classification": "L1",
+    "session_id": 57,
+    "topic_shift": false,
+    "speaker_transition": "None→You",
+    "confidence_score": 0.6677412673830986
+  },
+  {
+    "block_id": 215,
+    "classification": "L1",
+    "session_id": 57,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.6304979414641858
+  },
+  {
+    "block_id": 217,
+    "classification": "L2",
+    "session_id": 59,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7660415250062943
+  },
+  {
+    "block_id": 221,
+    "classification": "L1",
+    "session_id": 62,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0208303923904896
+  },
+  {
+    "block_id": 222,
+    "classification": "L1",
+    "session_id": 62,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 2.2848908818960187
+  },
+  {
+    "block_id": 224,
+    "classification": "L1",
+    "session_id": 63,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0648653763532638
+  },
+  {
+    "block_id": 226,
+    "classification": "L1",
+    "session_id": 64,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6915880947560072
+  },
+  {
+    "block_id": 228,
+    "classification": "L1",
+    "session_id": 65,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.34471286714077
+  },
+  {
+    "block_id": 231,
+    "classification": "L1",
+    "session_id": 66,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.3520301419496537
+  },
+  {
+    "block_id": 232,
+    "classification": "L1",
+    "session_id": 66,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.6029423111677169
+  },
+  {
+    "block_id": 233,
+    "classification": "L1",
+    "session_id": 66,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.3037172711640597
+  },
+  {
+    "block_id": 236,
+    "classification": "L1",
+    "session_id": 68,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.3006206981092692
+  },
+  {
+    "block_id": 239,
+    "classification": "L1",
+    "session_id": 68,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0203209663927555
+  },
+  {
+    "block_id": 240,
+    "classification": "L1",
+    "session_id": 68,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 2.3092165432572362
+  },
+  {
+    "block_id": 242,
+    "classification": "L1",
+    "session_id": 69,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 2.2775759190768
+  },
+  {
+    "block_id": 244,
+    "classification": "L1",
+    "session_id": 69,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0228887754678726
+  },
+  {
+    "block_id": 245,
+    "classification": "L1",
+    "session_id": 70,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 1.0631822884082793
+  },
+  {
+    "block_id": 246,
+    "classification": "L1",
+    "session_id": 71,
+    "topic_shift": true,
+    "speaker_transition": "None→You",
+    "confidence_score": 0.8060019052028656
+  },
+  {
+    "block_id": 247,
+    "classification": "L1",
+    "session_id": 72,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.3205095741152764
+  },
+  {
+    "block_id": 248,
+    "classification": "L1",
+    "session_id": 73,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 0.9870409980416297
+  },
+  {
+    "block_id": 250,
+    "classification": "L1",
+    "session_id": 74,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.9390498009324073
+  },
+  {
+    "block_id": 252,
+    "classification": "L1",
+    "session_id": 74,
+    "topic_shift": false,
+    "speaker_transition": "None→You",
+    "confidence_score": 0.666667877137661
+  },
+  {
+    "block_id": 253,
+    "classification": "L2",
+    "session_id": 74,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6580035121738911
+  },
+  {
+    "block_id": 254,
+    "classification": "L1",
+    "session_id": 75,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.0831127455830574
+  },
+  {
+    "block_id": 255,
+    "classification": "L1",
+    "session_id": 75,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0499136182665825
+  },
+  {
+    "block_id": 256,
+    "classification": "L1",
+    "session_id": 75,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.7189289590716362
+  },
+  {
+    "block_id": 257,
+    "classification": "L1",
+    "session_id": 75,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 2.3163745139241216
+  },
+  {
+    "block_id": 260,
+    "classification": "L1",
+    "session_id": 77,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.058128350585699
+  },
+  {
+    "block_id": 261,
+    "classification": "L1",
+    "session_id": 77,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.7610067239403725
+  },
+  {
+    "block_id": 262,
+    "classification": "L1",
+    "session_id": 77,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.705065143942833
+  },
+  {
+    "block_id": 265,
+    "classification": "L1",
+    "session_id": 77,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.2952083733677864
+  },
+  {
+    "block_id": 267,
+    "classification": "L1",
+    "session_id": 77,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.3606802287697792
+  },
+  {
+    "block_id": 268,
+    "classification": "L1",
+    "session_id": 77,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.0683283615112305
+  },
+  {
+    "block_id": 270,
+    "classification": "L1",
+    "session_id": 77,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.3892198730111123
+  },
+  {
+    "block_id": 271,
+    "classification": "L1",
+    "session_id": 77,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.6439387671649456
+  },
+  {
+    "block_id": 272,
+    "classification": "L1",
+    "session_id": 77,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.3329266223311425
+  },
+  {
+    "block_id": 273,
+    "classification": "L1",
+    "session_id": 77,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 0.8196455589532853
+  },
+  {
+    "block_id": 275,
+    "classification": "L1",
+    "session_id": 77,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0142207625508308
+  },
+  {
+    "block_id": 327,
+    "classification": "L1",
+    "session_id": 78,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.327089882194996
+  },
+  {
+    "block_id": 330,
+    "classification": "L1",
+    "session_id": 79,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.3872273493409157
+  },
+  {
+    "block_id": 332,
+    "classification": "L1",
+    "session_id": 81,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7103697157651186
+  },
+  {
+    "block_id": 333,
+    "classification": "L1",
+    "session_id": 81,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.6780468308925628
+  },
+  {
+    "block_id": 384,
+    "classification": "L1",
+    "session_id": 82,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.3030443384498358
+  },
+  {
+    "block_id": 385,
+    "classification": "L1",
+    "session_id": 82,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 0.7470809629559517
+  },
+  {
+    "block_id": 386,
+    "classification": "L1",
+    "session_id": 82,
+    "topic_shift": false,
+    "speaker_transition": "None→You",
+    "confidence_score": 0.6576928332448005
+  },
+  {
+    "block_id": 388,
+    "classification": "L1",
+    "session_id": 82,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.339202678501606
+  },
+  {
+    "block_id": 390,
+    "classification": "L1",
+    "session_id": 83,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.039525966644287
+  },
+  {
+    "block_id": 392,
+    "classification": "L1",
+    "session_id": 83,
+    "topic_shift": false,
+    "speaker_transition": "None→You",
+    "confidence_score": 0.7810246533155442
+  },
+  {
+    "block_id": 447,
+    "classification": "L1",
+    "session_id": 85,
+    "topic_shift": true,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.0185433435440063
+  },
+  {
+    "block_id": 450,
+    "classification": "L2",
+    "session_id": 85,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6563247883319855
+  },
+  {
+    "block_id": 456,
+    "classification": "L1",
+    "session_id": 87,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6823466309066862
+  },
+  {
+    "block_id": 457,
+    "classification": "L2",
+    "session_id": 88,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.7101923300325871
+  },
+  {
+    "block_id": 458,
+    "classification": "L1",
+    "session_id": 88,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6784265515208244
+  },
+  {
+    "block_id": 460,
+    "classification": "L1",
+    "session_id": 90,
+    "topic_shift": true,
+    "speaker_transition": "None→You",
+    "confidence_score": 0.9281268898397683
+  },
+  {
+    "block_id": 463,
+    "classification": "L1",
+    "session_id": 92,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0717756259441376
+  },
+  {
+    "block_id": 468,
+    "classification": "L1",
+    "session_id": 95,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0077394019067287
+  },
+  {
+    "block_id": 473,
+    "classification": "L1",
+    "session_id": 99,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.3547102871537209
+  },
+  {
+    "block_id": 476,
+    "classification": "L2",
+    "session_id": 101,
+    "topic_shift": true,
+    "speaker_transition": null,
+    "confidence_score": 1.0005101296305656
+  },
+  {
+    "block_id": 477,
+    "classification": "L1",
+    "session_id": 101,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.7594057878851891
+  },
+  {
+    "block_id": 478,
+    "classification": "L1",
+    "session_id": 101,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.075518209040165
+  },
+  {
+    "block_id": 480,
+    "classification": "L2",
+    "session_id": 102,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.6485189865082501
+  },
+  {
+    "block_id": 481,
+    "classification": "L1",
+    "session_id": 102,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 1.0039798408746718
+  },
+  {
+    "block_id": 482,
+    "classification": "L1",
+    "session_id": 103,
+    "topic_shift": true,
+    "speaker_transition": "None→You",
+    "confidence_score": 0.7450488120317459
+  },
+  {
+    "block_id": 483,
+    "classification": "L1",
+    "session_id": 103,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0810514348745346
+  },
+  {
+    "block_id": 484,
+    "classification": "L1",
+    "session_id": 103,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.7754935732483864
+  },
+  {
+    "block_id": 486,
+    "classification": "L1",
+    "session_id": 103,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.7753639331459999
+  },
+  {
+    "block_id": 488,
+    "classification": "L1",
+    "session_id": 103,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 0.7521033588051796
+  },
+  {
+    "block_id": 489,
+    "classification": "L1",
+    "session_id": 103,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.748820925951004
+  },
+  {
+    "block_id": 492,
+    "classification": "L1",
+    "session_id": 104,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.745170328617096
+  },
+  {
+    "block_id": 493,
+    "classification": "L1",
+    "session_id": 104,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0137544940412044
+  },
+  {
+    "block_id": 495,
+    "classification": "L1",
+    "session_id": 106,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.653506399780512
+  },
+  {
+    "block_id": 496,
+    "classification": "L1",
+    "session_id": 106,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 0.8182902559638023
+  },
+  {
+    "block_id": 505,
+    "classification": "L2",
+    "session_id": 107,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.6768881188333035
+  },
+  {
+    "block_id": 508,
+    "classification": "L1",
+    "session_id": 108,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7282134930789471
+  },
+  {
+    "block_id": 510,
+    "classification": "L1",
+    "session_id": 108,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6643233214318752
+  },
+  {
+    "block_id": 512,
+    "classification": "L1",
+    "session_id": 108,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.8981128820776939
+  },
+  {
+    "block_id": 513,
+    "classification": "L1",
+    "session_id": 108,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0371324527263641
+  },
+  {
+    "block_id": 515,
+    "classification": "L1",
+    "session_id": 108,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.7074302562475205
+  },
+  {
+    "block_id": 518,
+    "classification": "L1",
+    "session_id": 108,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 0.7775431501865387
+  },
+  {
+    "block_id": 529,
+    "classification": "L2",
+    "session_id": 114,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.665985383570194
+  },
+  {
+    "block_id": 530,
+    "classification": "L2",
+    "session_id": 114,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.6058749960362911
+  },
+  {
+    "block_id": 531,
+    "classification": "L1",
+    "session_id": 114,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.187173465117812
+  },
+  {
+    "block_id": 532,
+    "classification": "L1",
+    "session_id": 115,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.008053041100502
+  },
+  {
+    "block_id": 533,
+    "classification": "L1",
+    "session_id": 115,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.3127494330704212
+  },
+  {
+    "block_id": 538,
+    "classification": "L2",
+    "session_id": 119,
+    "topic_shift": true,
+    "speaker_transition": null,
+    "confidence_score": 1.0044026482105255
+  },
+  {
+    "block_id": 544,
+    "classification": "L1",
+    "session_id": 121,
+    "topic_shift": true,
+    "speaker_transition": null,
+    "confidence_score": 1.17634999550879
+  },
+  {
+    "block_id": 555,
+    "classification": "L1",
+    "session_id": 124,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 0.7379640753567219
+  },
+  {
+    "block_id": 557,
+    "classification": "L1",
+    "session_id": 125,
+    "topic_shift": false,
+    "speaker_transition": "You→None",
+    "confidence_score": 0.91625363022089
+  },
+  {
+    "block_id": 558,
+    "classification": "L1",
+    "session_id": 126,
+    "topic_shift": true,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.381521165728569
+  },
+  {
+    "block_id": 562,
+    "classification": "L1",
+    "session_id": 126,
+    "topic_shift": false,
+    "speaker_transition": "You→None",
+    "confidence_score": 0.91625363022089
+  },
+  {
+    "block_id": 563,
+    "classification": "L1",
+    "session_id": 126,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.3329405660927296
+  },
+  {
+    "block_id": 564,
+    "classification": "L1",
+    "session_id": 127,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.7748447021842003
+  },
+  {
+    "block_id": 565,
+    "classification": "L1",
+    "session_id": 127,
+    "topic_shift": false,
+    "speaker_transition": "You→None",
+    "confidence_score": 0.9605162033438682
+  },
+  {
+    "block_id": 566,
+    "classification": "L1",
+    "session_id": 127,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.0562085542082786
+  },
+  {
+    "block_id": 567,
+    "classification": "L1",
+    "session_id": 127,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.7761143109202385
+  },
+  {
+    "block_id": 568,
+    "classification": "L1",
+    "session_id": 127,
+    "topic_shift": false,
+    "speaker_transition": "You→None",
+    "confidence_score": 0.9456330874562263
+  },
+  {
+    "block_id": 569,
+    "classification": "L1",
+    "session_id": 127,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.0611925902962684
+  },
+  {
+    "block_id": 570,
+    "classification": "L1",
+    "session_id": 127,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.7648234701156617
+  },
+  {
+    "block_id": 571,
+    "classification": "L2",
+    "session_id": 127,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6970460334420204
+  },
+  {
+    "block_id": 572,
+    "classification": "L1",
+    "session_id": 127,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.7237094005942345
+  },
+  {
+    "block_id": 573,
+    "classification": "L1",
+    "session_id": 127,
+    "topic_shift": false,
+    "speaker_transition": "You→None",
+    "confidence_score": 0.9374671244621277
+  },
+  {
+    "block_id": 574,
+    "classification": "L1",
+    "session_id": 127,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.4939263348579408
+  },
+  {
+    "block_id": 576,
+    "classification": "L2",
+    "session_id": 127,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6934791983664036
+  },
+  {
+    "block_id": 577,
+    "classification": "L1",
+    "session_id": 127,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.6585954734683036
+  },
+  {
+    "block_id": 579,
+    "classification": "L1",
+    "session_id": 128,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→user",
+    "confidence_score": 0.6344261476397514
+  },
+  {
+    "block_id": 585,
+    "classification": "L1",
+    "session_id": 130,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.6772213269770145
+  },
+  {
+    "block_id": 589,
+    "classification": "L3",
+    "session_id": 132,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6579382655024528
+  },
+  {
+    "block_id": 599,
+    "classification": "L1",
+    "session_id": 136,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.5817362955212593
+  },
+  {
+    "block_id": 621,
+    "classification": "L3",
+    "session_id": 139,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.9415842956490814
+  },
+  {
+    "block_id": 626,
+    "classification": "L3",
+    "session_id": 141,
+    "topic_shift": true,
+    "speaker_transition": null,
+    "confidence_score": 0.6368007689714431
+  },
+  {
+    "block_id": 641,
+    "classification": "L3",
+    "session_id": 147,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.6862749049067497
+  },
+  {
+    "block_id": 661,
+    "classification": "L3",
+    "session_id": 153,
+    "topic_shift": false,
+    "speaker_transition": "You→None",
+    "confidence_score": 0.7337790980935096
+  },
+  {
+    "block_id": 665,
+    "classification": "L2",
+    "session_id": 155,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7598565661907196
+  },
+  {
+    "block_id": 666,
+    "classification": "L2",
+    "session_id": 156,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.2789467128366232
+  },
+  {
+    "block_id": 667,
+    "classification": "L2",
+    "session_id": 156,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.8614069578796624
+  },
+  {
+    "block_id": 668,
+    "classification": "L1",
+    "session_id": 157,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 0.6030738790519535
+  },
+  {
+    "block_id": 671,
+    "classification": "L2",
+    "session_id": 158,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→user",
+    "confidence_score": 0.6413321950286627
+  },
+  {
+    "block_id": 673,
+    "classification": "L1",
+    "session_id": 158,
+    "topic_shift": false,
+    "speaker_transition": "You→user",
+    "confidence_score": 0.9227695205807686
+  },
+  {
+    "block_id": 675,
+    "classification": "L1",
+    "session_id": 158,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→user",
+    "confidence_score": 0.6244249203801154
+  },
+  {
+    "block_id": 679,
+    "classification": "L1",
+    "session_id": 159,
+    "topic_shift": false,
+    "speaker_transition": "user→ChatGPT",
+    "confidence_score": 1.1920971310138702
+  },
+  {
+    "block_id": 680,
+    "classification": "L1",
+    "session_id": 159,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.0520486316680908
+  },
+  {
+    "block_id": 682,
+    "classification": "L1",
+    "session_id": 159,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.0488384447097778
+  },
+  {
+    "block_id": 683,
+    "classification": "L1",
+    "session_id": 159,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.3137689109146595
+  },
+  {
+    "block_id": 684,
+    "classification": "L2",
+    "session_id": 160,
+    "topic_shift": true,
+    "speaker_transition": null,
+    "confidence_score": 1.0402322556078434
+  },
+  {
+    "block_id": 685,
+    "classification": "L1",
+    "session_id": 160,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.737030397951603
+  },
+  {
+    "block_id": 686,
+    "classification": "L1",
+    "session_id": 160,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.325052468776703
+  },
+  {
+    "block_id": 689,
+    "classification": "L1",
+    "session_id": 161,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7958406883478165
+  },
+  {
+    "block_id": 690,
+    "classification": "L2",
+    "session_id": 161,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 0.7433552318811416
+  },
+  {
+    "block_id": 691,
+    "classification": "L1",
+    "session_id": 161,
+    "topic_shift": false,
+    "speaker_transition": "None→You",
+    "confidence_score": 0.6886778706312179
+  },
+  {
+    "block_id": 692,
+    "classification": "L1",
+    "session_id": 161,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7959543171525002
+  },
+  {
+    "block_id": 694,
+    "classification": "L1",
+    "session_id": 161,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.9562769985198974
+  },
+  {
+    "block_id": 695,
+    "classification": "L2",
+    "session_id": 161,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.6899759912490845
+  },
+  {
+    "block_id": 698,
+    "classification": "L1",
+    "session_id": 162,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.782171625494957
+  },
+  {
+    "block_id": 700,
+    "classification": "L2",
+    "session_id": 162,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.6778645695745945
+  },
+  {
+    "block_id": 705,
+    "classification": "L1",
+    "session_id": 164,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.9734716457501054
+  },
+  {
+    "block_id": 706,
+    "classification": "L1",
+    "session_id": 164,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.8857759834825992
+  },
+  {
+    "block_id": 707,
+    "classification": "L1",
+    "session_id": 164,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.035330469891429
+  },
+  {
+    "block_id": 710,
+    "classification": "L1",
+    "session_id": 166,
+    "topic_shift": true,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 0.9614576781988144
+  },
+  {
+    "block_id": 715,
+    "classification": "L2",
+    "session_id": 167,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.255056913822889
+  },
+  {
+    "block_id": 719,
+    "classification": "L1",
+    "session_id": 169,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0193217541277408
+  },
+  {
+    "block_id": 721,
+    "classification": "L2",
+    "session_id": 169,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 0.6605362467467785
+  },
+  {
+    "block_id": 726,
+    "classification": "L2",
+    "session_id": 169,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.2041691344976424
+  },
+  {
+    "block_id": 727,
+    "classification": "L1",
+    "session_id": 169,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.0222765240073204
+  },
+  {
+    "block_id": 728,
+    "classification": "L1",
+    "session_id": 169,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 1.0932380265593529
+  },
+  {
+    "block_id": 729,
+    "classification": "L2",
+    "session_id": 169,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 0.68720114544034
+  },
+  {
+    "block_id": 730,
+    "classification": "L1",
+    "session_id": 169,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.8081925696134568
+  },
+  {
+    "block_id": 731,
+    "classification": "L1",
+    "session_id": 169,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.1178913760781288
+  },
+  {
+    "block_id": 733,
+    "classification": "L1",
+    "session_id": 169,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.4168437701821328
+  },
+  {
+    "block_id": 736,
+    "classification": "L2",
+    "session_id": 169,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.6379938800930975
+  },
+  {
+    "block_id": 738,
+    "classification": "L1",
+    "session_id": 169,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.037185709476471
+  },
+  {
+    "block_id": 740,
+    "classification": "L1",
+    "session_id": 171,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.033119357228279
+  },
+  {
+    "block_id": 741,
+    "classification": "L1",
+    "session_id": 171,
+    "topic_shift": false,
+    "speaker_transition": "You→None",
+    "confidence_score": 1.090509780406952
+  },
+  {
+    "block_id": 742,
+    "classification": "L2",
+    "session_id": 171,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 0.671739953905344
+  },
+  {
+    "block_id": 744,
+    "classification": "L1",
+    "session_id": 171,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.0178845781087875
+  },
+  {
+    "block_id": 745,
+    "classification": "L1",
+    "session_id": 171,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 1.0577193862199783
+  },
+  {
+    "block_id": 748,
+    "classification": "L1",
+    "session_id": 171,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7667908969521523
+  },
+  {
+    "block_id": 751,
+    "classification": "L1",
+    "session_id": 173,
+    "topic_shift": true,
+    "speaker_transition": null,
+    "confidence_score": 0.7553878089785576
+  },
+  {
+    "block_id": 756,
+    "classification": "L1",
+    "session_id": 174,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.0557249850034713
+  },
+  {
+    "block_id": 757,
+    "classification": "L1",
+    "session_id": 174,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.5912309944331646
+  },
+  {
+    "block_id": 758,
+    "classification": "L1",
+    "session_id": 174,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.8751985186338425
+  },
+  {
+    "block_id": 759,
+    "classification": "L1",
+    "session_id": 174,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.084184526503086
+  },
+  {
+    "block_id": 760,
+    "classification": "L1",
+    "session_id": 174,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.9870455023646354
+  },
+  {
+    "block_id": 761,
+    "classification": "L1",
+    "session_id": 174,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 0.8141642224788666
+  },
+  {
+    "block_id": 762,
+    "classification": "L1",
+    "session_id": 175,
+    "topic_shift": true,
+    "speaker_transition": "None→You",
+    "confidence_score": 1.1470926665067673
+  },
+  {
+    "block_id": 763,
+    "classification": "L1",
+    "session_id": 175,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.35235686480999
+  },
+  {
+    "block_id": 765,
+    "classification": "L1",
+    "session_id": 175,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7597696709632874
+  },
+  {
+    "block_id": 768,
+    "classification": "L2",
+    "session_id": 175,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 0.9240340024530888
+  },
+  {
+    "block_id": 772,
+    "classification": "L1",
+    "session_id": 175,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.0729985695183277
+  },
+  {
+    "block_id": 773,
+    "classification": "L1",
+    "session_id": 175,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 1.0325775882601738
+  },
+  {
+    "block_id": 775,
+    "classification": "L2",
+    "session_id": 176,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.9884261028468608
+  },
+  {
+    "block_id": 776,
+    "classification": "L1",
+    "session_id": 176,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.0584614734947682
+  },
+  {
+    "block_id": 777,
+    "classification": "L1",
+    "session_id": 176,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 1.0330072259902954
+  },
+  {
+    "block_id": 778,
+    "classification": "L2",
+    "session_id": 176,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 0.6867860959470272
+  },
+  {
+    "block_id": 781,
+    "classification": "L2",
+    "session_id": 176,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 0.6808802926540375
+  },
+  {
+    "block_id": 782,
+    "classification": "L1",
+    "session_id": 176,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 0.7601769602298737
+  },
+  {
+    "block_id": 783,
+    "classification": "L1",
+    "session_id": 176,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.2279181665182113
+  },
+  {
+    "block_id": 784,
+    "classification": "L1",
+    "session_id": 176,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.0402790933698416
+  },
+  {
+    "block_id": 785,
+    "classification": "L2",
+    "session_id": 176,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.6975286746025086
+  },
+  {
+    "block_id": 798,
+    "classification": "L2",
+    "session_id": 181,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6597677966207266
+  },
+  {
+    "block_id": 802,
+    "classification": "L1",
+    "session_id": 181,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7120650227367878
+  },
+  {
+    "block_id": 806,
+    "classification": "L2",
+    "session_id": 182,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.690975212790072
+  },
+  {
+    "block_id": 812,
+    "classification": "L1",
+    "session_id": 183,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.6009481446444987
+  },
+  {
+    "block_id": 816,
+    "classification": "L1",
+    "session_id": 185,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.2678808474168182
+  },
+  {
+    "block_id": 827,
+    "classification": "L1",
+    "session_id": 190,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.7449207192659378
+  },
+  {
+    "block_id": 828,
+    "classification": "L1",
+    "session_id": 190,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 2.1620506392717362
+  },
+  {
+    "block_id": 830,
+    "classification": "L1",
+    "session_id": 190,
+    "topic_shift": false,
+    "speaker_transition": "None→You",
+    "confidence_score": 0.6507790520787239
+  },
+  {
+    "block_id": 832,
+    "classification": "L1",
+    "session_id": 191,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.042701824605465
+  },
+  {
+    "block_id": 833,
+    "classification": "L2",
+    "session_id": 191,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.2696382922679186
+  },
+  {
+    "block_id": 835,
+    "classification": "L1",
+    "session_id": 191,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.353087565600872
+  },
+  {
+    "block_id": 836,
+    "classification": "L1",
+    "session_id": 191,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.675016769170761
+  },
+  {
+    "block_id": 839,
+    "classification": "L1",
+    "session_id": 192,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0573239061236381
+  },
+  {
+    "block_id": 840,
+    "classification": "L1",
+    "session_id": 192,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.7570841199159623
+  },
+  {
+    "block_id": 841,
+    "classification": "L1",
+    "session_id": 192,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.9972723066061735
+  },
+  {
+    "block_id": 843,
+    "classification": "L1",
+    "session_id": 192,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6086144073680043
+  },
+  {
+    "block_id": 848,
+    "classification": "L3",
+    "session_id": 193,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.082425268292427
+  },
+  {
+    "block_id": 849,
+    "classification": "L2",
+    "session_id": 194,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.347307758629322
+  },
+  {
+    "block_id": 854,
+    "classification": "L2",
+    "session_id": 195,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 1.5939921438694
+  },
+  {
+    "block_id": 855,
+    "classification": "L3",
+    "session_id": 196,
+    "topic_shift": true,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.626089663207531
+  },
+  {
+    "block_id": 856,
+    "classification": "L1",
+    "session_id": 196,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 1.5595178249180317
+  },
+  {
+    "block_id": 863,
+    "classification": "L1",
+    "session_id": 198,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.6740031823515892
+  },
+  {
+    "block_id": 864,
+    "classification": "L2",
+    "session_id": 198,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6639359550178051
+  },
+  {
+    "block_id": 867,
+    "classification": "L3",
+    "session_id": 198,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.5220811912417411
+  },
+  {
+    "block_id": 868,
+    "classification": "L3",
+    "session_id": 199,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 1.6232243338227272
+  },
+  {
+    "block_id": 870,
+    "classification": "L3",
+    "session_id": 200,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.1398317496478556
+  },
+  {
+    "block_id": 872,
+    "classification": "L3",
+    "session_id": 201,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.2066966857910157
+  },
+  {
+    "block_id": 873,
+    "classification": "L3",
+    "session_id": 201,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.6263098260760308
+  },
+  {
+    "block_id": 876,
+    "classification": "L3",
+    "session_id": 202,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.6474796673655511
+  },
+  {
+    "block_id": 885,
+    "classification": "L2",
+    "session_id": 204,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6450613954663277
+  },
+  {
+    "block_id": 891,
+    "classification": "L2",
+    "session_id": 206,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.9538633707538247
+  },
+  {
+    "block_id": 892,
+    "classification": "L1",
+    "session_id": 206,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.5370212560892105
+  },
+  {
+    "block_id": 893,
+    "classification": "L1",
+    "session_id": 206,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 1.3360520163178446
+  },
+  {
+    "block_id": 894,
+    "classification": "L2",
+    "session_id": 206,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.6692404434084892
+  },
+  {
+    "block_id": 904,
+    "classification": "L1",
+    "session_id": 212,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.0660837656259536
+  },
+  {
+    "block_id": 905,
+    "classification": "L1",
+    "session_id": 212,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7776839714348317
+  },
+  {
+    "block_id": 906,
+    "classification": "L1",
+    "session_id": 212,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.0457268837094307
+  },
+  {
+    "block_id": 910,
+    "classification": "L2",
+    "session_id": 214,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6893446998298168
+  },
+  {
+    "block_id": 915,
+    "classification": "L1",
+    "session_id": 218,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.0798034137487411
+  },
+  {
+    "block_id": 916,
+    "classification": "L1",
+    "session_id": 218,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.9433483678102492
+  },
+  {
+    "block_id": 917,
+    "classification": "L1",
+    "session_id": 218,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 1.1063558052539824
+  },
+  {
+    "block_id": 918,
+    "classification": "L1",
+    "session_id": 218,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 1.92761828109622
+  },
+  {
+    "block_id": 919,
+    "classification": "L1",
+    "session_id": 218,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 0.7307889422774315
+  },
+  {
+    "block_id": 920,
+    "classification": "L1",
+    "session_id": 219,
+    "topic_shift": true,
+    "speaker_transition": "None→You",
+    "confidence_score": 0.9109986094832421
+  },
+  {
+    "block_id": 921,
+    "classification": "L1",
+    "session_id": 219,
+    "topic_shift": false,
+    "speaker_transition": "You→None",
+    "confidence_score": 1.0506367448091507
+  },
+  {
+    "block_id": 925,
+    "classification": "L1",
+    "session_id": 219,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.9082179931998253
+  },
+  {
+    "block_id": 927,
+    "classification": "L1",
+    "session_id": 219,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.0432479563355446
+  },
+  {
+    "block_id": 928,
+    "classification": "L1",
+    "session_id": 219,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.804632562994957
+  },
+  {
+    "block_id": 930,
+    "classification": "L1",
+    "session_id": 219,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.781130108833313
+  },
+  {
+    "block_id": 933,
+    "classification": "L1",
+    "session_id": 221,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7606283354759217
+  },
+  {
+    "block_id": 934,
+    "classification": "L2",
+    "session_id": 221,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.6861587193608284
+  },
+  {
+    "block_id": 935,
+    "classification": "L1",
+    "session_id": 222,
+    "topic_shift": true,
+    "speaker_transition": "You→user",
+    "confidence_score": 1.0108539341390133
+  },
+  {
+    "block_id": 936,
+    "classification": "L1",
+    "session_id": 222,
+    "topic_shift": false,
+    "speaker_transition": "user→None",
+    "confidence_score": 1.4925496490299701
+  },
+  {
+    "block_id": 937,
+    "classification": "L1",
+    "session_id": 222,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.9911323534697294
+  },
+  {
+    "block_id": 938,
+    "classification": "L2",
+    "session_id": 222,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 0.9862044477462768
+  },
+  {
+    "block_id": 941,
+    "classification": "L1",
+    "session_id": 223,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.3129394936561585
+  },
+  {
+    "block_id": 942,
+    "classification": "L1",
+    "session_id": 224,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 1.0437615504860878
+  },
+  {
+    "block_id": 944,
+    "classification": "L1",
+    "session_id": 226,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.1554697674512864
+  },
+  {
+    "block_id": 945,
+    "classification": "L1",
+    "session_id": 226,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.0549793872237205
+  },
+  {
+    "block_id": 948,
+    "classification": "L1",
+    "session_id": 227,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.8731079548597336
+  },
+  {
+    "block_id": 957,
+    "classification": "L2",
+    "session_id": 229,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.0987850606441496
+  },
+  {
+    "block_id": 958,
+    "classification": "L1",
+    "session_id": 229,
+    "topic_shift": false,
+    "speaker_transition": "You→None",
+    "confidence_score": 0.9210475416898728
+  },
+  {
+    "block_id": 959,
+    "classification": "L1",
+    "session_id": 229,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 0.871682627722621
+  },
+  {
+    "block_id": 961,
+    "classification": "L2",
+    "session_id": 230,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6973167839646339
+  },
+  {
+    "block_id": 963,
+    "classification": "L1",
+    "session_id": 232,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7203156653046608
+  },
+  {
+    "block_id": 964,
+    "classification": "L1",
+    "session_id": 232,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.8403394451439381
+  },
+  {
+    "block_id": 965,
+    "classification": "L1",
+    "session_id": 232,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.4834258268028497
+  },
+  {
+    "block_id": 972,
+    "classification": "L2",
+    "session_id": 234,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6882305735349655
+  },
+  {
+    "block_id": 980,
+    "classification": "L1",
+    "session_id": 236,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.248230998635292
+  },
+  {
+    "block_id": 985,
+    "classification": "L2",
+    "session_id": 236,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6978899681568146
+  },
+  {
+    "block_id": 986,
+    "classification": "L1",
+    "session_id": 236,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.8781153081059456
+  },
+  {
+    "block_id": 987,
+    "classification": "L1",
+    "session_id": 236,
+    "topic_shift": false,
+    "speaker_transition": "You→None",
+    "confidence_score": 0.6616204389929771
+  },
+  {
+    "block_id": 988,
+    "classification": "L1",
+    "session_id": 236,
+    "topic_shift": false,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 0.9232379578333347
+  },
+  {
+    "block_id": 990,
+    "classification": "L2",
+    "session_id": 237,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7043348974734545
+  },
+  {
+    "block_id": 992,
+    "classification": "L2",
+    "session_id": 237,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6275401090830565
+  },
+  {
+    "block_id": 996,
+    "classification": "L2",
+    "session_id": 237,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.263918718099594
+  },
+  {
+    "block_id": 998,
+    "classification": "L1",
+    "session_id": 237,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7279462035000325
+  },
+  {
+    "block_id": 999,
+    "classification": "L1",
+    "session_id": 238,
+    "topic_shift": true,
+    "speaker_transition": null,
+    "confidence_score": 1.0770048308372497
+  },
+  {
+    "block_id": 1000,
+    "classification": "L1",
+    "session_id": 239,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.0193638867139816
+  },
+  {
+    "block_id": 1001,
+    "classification": "L1",
+    "session_id": 239,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0279159727692604
+  },
+  {
+    "block_id": 1002,
+    "classification": "L1",
+    "session_id": 239,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.526436204612255
+  },
+  {
+    "block_id": 1004,
+    "classification": "L1",
+    "session_id": 241,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 2.0141710548996925
+  },
+  {
+    "block_id": 1008,
+    "classification": "L1",
+    "session_id": 244,
+    "topic_shift": true,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 0.9392906729280949
+  },
+  {
+    "block_id": 1009,
+    "classification": "L1",
+    "session_id": 244,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.5339468219876289
+  },
+  {
+    "block_id": 1010,
+    "classification": "L1",
+    "session_id": 244,
+    "topic_shift": false,
+    "speaker_transition": "You→None",
+    "confidence_score": 1.399614366352558
+  },
+  {
+    "block_id": 1011,
+    "classification": "L3",
+    "session_id": 244,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.13777370929718
+  },
+  {
+    "block_id": 1013,
+    "classification": "L1",
+    "session_id": 245,
+    "topic_shift": true,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 0.9739758317172527
+  },
+  {
+    "block_id": 1015,
+    "classification": "L2",
+    "session_id": 247,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7478111612796784
+  },
+  {
+    "block_id": 1017,
+    "classification": "L2",
+    "session_id": 249,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.3228237728774548
+  },
+  {
+    "block_id": 1019,
+    "classification": "L1",
+    "session_id": 250,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.7228031077980994
+  },
+  {
+    "block_id": 1021,
+    "classification": "L2",
+    "session_id": 250,
+    "topic_shift": false,
+    "speaker_transition": "None→You",
+    "confidence_score": 0.6674276132881641
+  },
+  {
+    "block_id": 1022,
+    "classification": "L1",
+    "session_id": 250,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.2876522960662842
+  },
+  {
+    "block_id": 1025,
+    "classification": "L2",
+    "session_id": 252,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.5527267982065678
+  },
+  {
+    "block_id": 1027,
+    "classification": "L2",
+    "session_id": 252,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6576817234605551
+  },
+  {
+    "block_id": 1028,
+    "classification": "L1",
+    "session_id": 252,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.2602245652675628
+  },
+  {
+    "block_id": 1031,
+    "classification": "L1",
+    "session_id": 252,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6381891899555922
+  },
+  {
+    "block_id": 1032,
+    "classification": "L1",
+    "session_id": 252,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.3618177270889282
+  },
+  {
+    "block_id": 1033,
+    "classification": "L1",
+    "session_id": 252,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.025729961246252
+  },
+  {
+    "block_id": 1037,
+    "classification": "L1",
+    "session_id": 253,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.2855576212108135
+  },
+  {
+    "block_id": 1039,
+    "classification": "L1",
+    "session_id": 254,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6753211644291878
+  },
+  {
+    "block_id": 1041,
+    "classification": "L1",
+    "session_id": 255,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7977841946482659
+  },
+  {
+    "block_id": 1044,
+    "classification": "L2",
+    "session_id": 256,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.6362546150386333
+  },
+  {
+    "block_id": 1062,
+    "classification": "L3",
+    "session_id": 271,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6643720000982284
+  },
+  {
+    "block_id": 1065,
+    "classification": "L2",
+    "session_id": 272,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.6362546150386333
+  },
+  {
+    "block_id": 1068,
+    "classification": "L2",
+    "session_id": 275,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0271920296549797
+  },
+  {
+    "block_id": 1077,
+    "classification": "L3",
+    "session_id": 283,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.7280952206254006
+  },
+  {
+    "block_id": 1118,
+    "classification": "L1",
+    "session_id": 316,
+    "topic_shift": true,
+    "speaker_transition": null,
+    "confidence_score": 0.6505756703019142
+  },
+  {
+    "block_id": 1122,
+    "classification": "L1",
+    "session_id": 318,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.9245800609886645
+  },
+  {
+    "block_id": 1123,
+    "classification": "L1",
+    "session_id": 318,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→None",
+    "confidence_score": 0.8787763051986694
+  },
+  {
+    "block_id": 1129,
+    "classification": "L2",
+    "session_id": 320,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6598973007500172
+  },
+  {
+    "block_id": 1136,
+    "classification": "L2",
+    "session_id": 322,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6743379192054272
+  },
+  {
+    "block_id": 1138,
+    "classification": "L1",
+    "session_id": 322,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6981926065683365
+  },
+  {
+    "block_id": 1140,
+    "classification": "L1",
+    "session_id": 323,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0388460341095924
+  },
+  {
+    "block_id": 1142,
+    "classification": "L1",
+    "session_id": 323,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7305064278841019
+  },
+  {
+    "block_id": 1143,
+    "classification": "L1",
+    "session_id": 323,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.510419706404209
+  },
+  {
+    "block_id": 1144,
+    "classification": "L1",
+    "session_id": 323,
+    "topic_shift": false,
+    "speaker_transition": "You→None",
+    "confidence_score": 1.3552277469635012
+  },
+  {
+    "block_id": 1145,
+    "classification": "L3",
+    "session_id": 323,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.2077720578908921
+  },
+  {
+    "block_id": 1147,
+    "classification": "L1",
+    "session_id": 324,
+    "topic_shift": true,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 0.6840397220849991
+  },
+  {
+    "block_id": 1150,
+    "classification": "L2",
+    "session_id": 324,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.7006826320290566
+  },
+  {
+    "block_id": 1152,
+    "classification": "L1",
+    "session_id": 325,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0429191249608993
+  },
+  {
+    "block_id": 1154,
+    "classification": "L1",
+    "session_id": 326,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.6708720677495004
+  },
+  {
+    "block_id": 1156,
+    "classification": "L1",
+    "session_id": 326,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6894774970784784
+  },
+  {
+    "block_id": 1158,
+    "classification": "L2",
+    "session_id": 326,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6107561004906893
+  },
+  {
+    "block_id": 1160,
+    "classification": "L2",
+    "session_id": 326,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6435550121683628
+  },
+  {
+    "block_id": 1162,
+    "classification": "L2",
+    "session_id": 328,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7258620786666871
+  },
+  {
+    "block_id": 1163,
+    "classification": "L1",
+    "session_id": 328,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.7852997458577157
+  },
+  {
+    "block_id": 1164,
+    "classification": "L1",
+    "session_id": 328,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7405052262544632
+  },
+  {
+    "block_id": 1169,
+    "classification": "L1",
+    "session_id": 330,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.0857455493062735
+  },
+  {
+    "block_id": 1170,
+    "classification": "L1",
+    "session_id": 330,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.1164354346990586
+  },
+  {
+    "block_id": 1171,
+    "classification": "L1",
+    "session_id": 330,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.2093608601391315
+  },
+  {
+    "block_id": 1172,
+    "classification": "L1",
+    "session_id": 330,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.363993924021721
+  },
+  {
+    "block_id": 1173,
+    "classification": "L2",
+    "session_id": 330,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.9814010882377624
+  },
+  {
+    "block_id": 1176,
+    "classification": "L1",
+    "session_id": 331,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.8349950395822525
+  },
+  {
+    "block_id": 1186,
+    "classification": "L1",
+    "session_id": 334,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.924660482108593
+  },
+  {
+    "block_id": 1188,
+    "classification": "L2",
+    "session_id": 335,
+    "topic_shift": true,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 0.6900130252540112
+  },
+  {
+    "block_id": 1191,
+    "classification": "L1",
+    "session_id": 335,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.7632800301909447
+  },
+  {
+    "block_id": 1195,
+    "classification": "L3",
+    "session_id": 336,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.6481215806305408
+  },
+  {
+    "block_id": 1199,
+    "classification": "L1",
+    "session_id": 336,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.7850345557928086
+  },
+  {
+    "block_id": 1204,
+    "classification": "L1",
+    "session_id": 338,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.3299133057892323
+  },
+  {
+    "block_id": 1205,
+    "classification": "L1",
+    "session_id": 338,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.0800203374028206
+  },
+  {
+    "block_id": 1206,
+    "classification": "L2",
+    "session_id": 338,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.9581318446993827
+  },
+  {
+    "block_id": 1209,
+    "classification": "L1",
+    "session_id": 338,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.111039311349392
+  },
+  {
+    "block_id": 1210,
+    "classification": "L1",
+    "session_id": 338,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.2218123859167098
+  },
+  {
+    "block_id": 1211,
+    "classification": "L1",
+    "session_id": 338,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.3000703214108944
+  },
+  {
+    "block_id": 1212,
+    "classification": "L1",
+    "session_id": 338,
+    "topic_shift": false,
+    "speaker_transition": "You→None",
+    "confidence_score": 1.392427931189537
+  },
+  {
+    "block_id": 1213,
+    "classification": "L1",
+    "session_id": 338,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.0223886287212371
+  },
+  {
+    "block_id": 1215,
+    "classification": "L1",
+    "session_id": 340,
+    "topic_shift": true,
+    "speaker_transition": "None→ChatGPT",
+    "confidence_score": 0.6443501346558332
+  },
+  {
+    "block_id": 1217,
+    "classification": "L1",
+    "session_id": 342,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0352198216319084
+  },
+  {
+    "block_id": 1223,
+    "classification": "L2",
+    "session_id": 344,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6244806967303157
+  },
+  {
+    "block_id": 1226,
+    "classification": "L3",
+    "session_id": 345,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.9923581176996231
+  },
+  {
+    "block_id": 1231,
+    "classification": "L1",
+    "session_id": 346,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.6538472265899182
+  },
+  {
+    "block_id": 1237,
+    "classification": "L1",
+    "session_id": 348,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6778540973365307
+  },
+  {
+    "block_id": 1240,
+    "classification": "L2",
+    "session_id": 349,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.041253208220005
+  },
+  {
+    "block_id": 1241,
+    "classification": "L2",
+    "session_id": 349,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.3796435859501361
+  },
+  {
+    "block_id": 1243,
+    "classification": "L2",
+    "session_id": 350,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6462154061160982
+  },
+  {
+    "block_id": 1249,
+    "classification": "L1",
+    "session_id": 353,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.9847454521991312
+  },
+  {
+    "block_id": 1253,
+    "classification": "L2",
+    "session_id": 355,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.683644107580185
+  },
+  {
+    "block_id": 1256,
+    "classification": "L1",
+    "session_id": 357,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.037561133056879
+  },
+  {
+    "block_id": 1258,
+    "classification": "L1",
+    "session_id": 358,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.6411071503162383
+  },
+  {
+    "block_id": 1259,
+    "classification": "L1",
+    "session_id": 359,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.682943076658994
+  },
+  {
+    "block_id": 1261,
+    "classification": "L1",
+    "session_id": 359,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6538010577857495
+  },
+  {
+    "block_id": 1262,
+    "classification": "L1",
+    "session_id": 359,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.0441723680496215
+  },
+  {
+    "block_id": 1266,
+    "classification": "L2",
+    "session_id": 360,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.6541690634191036
+  },
+  {
+    "block_id": 1268,
+    "classification": "L2",
+    "session_id": 360,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.9576453832536935
+  },
+  {
+    "block_id": 1272,
+    "classification": "L1",
+    "session_id": 360,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7493585351109505
+  },
+  {
+    "block_id": 1273,
+    "classification": "L1",
+    "session_id": 360,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.2971377421617507
+  },
+  {
+    "block_id": 1274,
+    "classification": "L1",
+    "session_id": 360,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.0453870701789856
+  },
+  {
+    "block_id": 1275,
+    "classification": "L1",
+    "session_id": 360,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.0319543252885341
+  },
+  {
+    "block_id": 1276,
+    "classification": "L1",
+    "session_id": 360,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.7529580894112587
+  },
+  {
+    "block_id": 1281,
+    "classification": "L2",
+    "session_id": 360,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6961136603355408
+  },
+  {
+    "block_id": 1283,
+    "classification": "L3",
+    "session_id": 361,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.7804760690778494
+  },
+  {
+    "block_id": 1286,
+    "classification": "L1",
+    "session_id": 362,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 0.6085820709168911
+  },
+  {
+    "block_id": 1287,
+    "classification": "L1",
+    "session_id": 362,
+    "topic_shift": false,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 0.9330686593055725
+  },
+  {
+    "block_id": 1288,
+    "classification": "L1",
+    "session_id": 362,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.9059088124334812
+  },
+  {
+    "block_id": 1291,
+    "classification": "L1",
+    "session_id": 364,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.104280195236206
+  },
+  {
+    "block_id": 1292,
+    "classification": "L1",
+    "session_id": 364,
+    "topic_shift": false,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.325869125366211
+  },
+  {
+    "block_id": 1293,
+    "classification": "L1",
+    "session_id": 365,
+    "topic_shift": true,
+    "speaker_transition": "ChatGPT→You",
+    "confidence_score": 1.3414149305224419
+  },
+  {
+    "block_id": 1294,
+    "classification": "L1",
+    "session_id": 365,
+    "topic_shift": false,
+    "speaker_transition": "You→None",
+    "confidence_score": 1.3934124807119368
+  },
+  {
+    "block_id": 1295,
+    "classification": "L1",
+    "session_id": 365,
+    "topic_shift": false,
+    "speaker_transition": null,
+    "confidence_score": 1.0135666644573211
+  },
+  {
+    "block_id": 1301,
+    "classification": "L2",
+    "session_id": 370,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 0.6908218109235168
+  },
+  {
+    "block_id": 1303,
+    "classification": "L1",
+    "session_id": 372,
+    "topic_shift": true,
+    "speaker_transition": "You→ChatGPT",
+    "confidence_score": 1.2823229547441006
+  }
+]

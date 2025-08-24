@@ -6,6 +6,7 @@ Adds rich metadata to classification results including cross-references and sess
 import os
 import re
 import json
+import copy
 from datetime import datetime
 from typing import Dict, List, Any, Optional
 from pathlib import Path
@@ -38,6 +39,115 @@ class MetadataEnricher:
         """Initialize the metadata enricher"""
         self.session_cache = {}  # Cache for session metadata
         self.cross_references = {}  # Cross-reference database
+        self.metadata = []  # Structured classification metadata
+
+    def enrich(self, block_id: int, classification: str, session_id: int, topic_shift: bool,
+               speaker_transition: str = None, confidence: float = None):
+        """
+        Add structured metadata for a classification result
+        
+        Args:
+            block_id: Index of the conversation block
+            classification: L1, L2, or L3 classification
+            session_id: Session identifier from context analysis
+            topic_shift: Whether a topic shift occurred
+            speaker_transition: Speaker transition type (if any)
+            confidence: Classification confidence score
+        """
+        # Create a safe, flattened metadata entry with explicit type conversion
+        # No deep copy needed since we're only using primitive types
+        safe_metadata = {
+            "block_id": int(block_id),
+            "classification": str(classification),
+            "session_id": int(session_id),
+            "topic_shift": bool(topic_shift),
+            "speaker_transition": str(speaker_transition) if speaker_transition else None,
+            "confidence_score": float(confidence) if confidence is not None else None
+        }
+        
+        self.metadata.append(safe_metadata)
+
+    def save_json(self, path: str):
+        """
+        Save structured metadata to JSON file
+        
+        Args:
+            path: Output file path
+        """
+        try:
+            with open(path, "w", encoding="utf-8") as f:
+                json.dump(self.metadata, f, indent=2, default=convert_numpy)
+        except ValueError as e:
+            if "Circular reference" in str(e):
+                # Fallback: create a safe copy of metadata without circular references
+                logger.warning("Circular reference detected, creating safe copy for serialization")
+                safe_metadata = []
+                for entry in self.metadata:
+                    # Create a minimal safe version with explicit type conversion
+                    safe_metadata.append({
+                        "block_id": int(entry.get("block_id", 0)),
+                        "classification": str(entry.get("classification", "unknown")),
+                        "session_id": int(entry.get("session_id", 0)),
+                        "topic_shift": bool(entry.get("topic_shift", False)),
+                        "speaker_transition": str(entry.get("speaker_transition", "")) if entry.get("speaker_transition") else None,
+                        "confidence_score": float(entry.get("confidence_score", 0.0)) if entry.get("confidence_score") is not None else None
+                    })
+                
+                # Try saving the safe copy
+                with open(path, "w", encoding="utf-8") as f:
+                    json.dump(safe_metadata, f, indent=2, default=convert_numpy)
+                logger.info(f"Successfully saved metadata with {len(safe_metadata)} entries after circular reference fix")
+            else:
+                raise e
+
+    def get_metadata(self):
+        """Get the current metadata list"""
+        return self.metadata
+    
+    def _create_safe_copy(self, obj):
+        """
+        Create a safe copy of an object to prevent circular references
+        
+        Args:
+            obj: Object to copy
+            
+        Returns:
+            Safe copy of the object
+        """
+        if obj is None:
+            return None
+        
+        try:
+            # For dictionaries, create a new dict with safe values
+            if isinstance(obj, dict):
+                safe_dict = {}
+                for key, value in obj.items():
+                    if isinstance(value, (str, int, float, bool)) or value is None:
+                        safe_dict[key] = value
+                    elif isinstance(value, list):
+                        safe_dict[key] = [self._create_safe_copy(item) for item in value]
+                    elif isinstance(value, dict):
+                        safe_dict[key] = self._create_safe_copy(value)
+                    else:
+                        # Convert other types to string
+                        safe_dict[key] = str(value)
+                return safe_dict
+            
+            # For lists, create a new list with safe values
+            elif isinstance(obj, list):
+                return [self._create_safe_copy(item) for item in obj]
+            
+            # For primitive types, return as is
+            elif isinstance(obj, (str, int, float, bool)):
+                return obj
+            
+            # For other types, convert to string
+            else:
+                return str(obj)
+                
+        except Exception as e:
+            logger.warning(f"Failed to create safe copy: {e}")
+            return str(obj) if obj is not None else None
     
     def enrich_results(self, results: Dict[str, List[Any]], input_path: str) -> Dict[str, List[Any]]:
         """
@@ -50,32 +160,48 @@ class MetadataEnricher:
         Returns:
             Enriched results with additional metadata
         """
-        # Extract session metadata
-        session_metadata = self._extract_session_metadata(input_path)
-        
-        # Add metadata to each classification result
-        for level, classifications in results.items():
-            for result in classifications:
-                # Add session metadata
-                result.session_metadata = session_metadata
-                
-                # Add content hash for deduplication
-                result.content_hash = self._calculate_content_hash(result.text)
-                
-                # Add cross-references
-                result.cross_references = self._find_cross_references(result)
-                
-                # Add temporal metadata
-                result.temporal_metadata = self._extract_temporal_metadata(result)
-                
-                # Add semantic metadata
-                result.semantic_metadata = self._extract_semantic_metadata(result)
-                
-                # Add speaker analysis
-                result.speaker_analysis = self._analyze_speaker_patterns(result)
-        
-        # Update cross-reference database
-        self._update_cross_references(results, input_path)
+        try:
+            # Extract session metadata
+            session_metadata = self._extract_session_metadata(input_path)
+            
+            # Add metadata to each classification result
+            for level, classifications in results.items():
+                for result in classifications:
+                    try:
+                        # Add session metadata (safe copy)
+                        result.session_metadata = self._create_safe_copy(session_metadata)
+                        
+                        # Add content hash for deduplication
+                        result.content_hash = self._calculate_content_hash(result.text)
+                        
+                        # Add cross-references (safe copy)
+                        cross_refs = self._find_cross_references(result)
+                        result.cross_references = self._create_safe_copy(cross_refs)
+                        
+                        # Add temporal metadata (safe copy)
+                        temporal_metadata = self._extract_temporal_metadata(result)
+                        result.temporal_metadata = self._create_safe_copy(temporal_metadata)
+                        
+                        # Add semantic metadata (safe copy)
+                        semantic_metadata = self._extract_semantic_metadata(result)
+                        result.semantic_metadata = self._create_safe_copy(semantic_metadata)
+                        
+                        # Add speaker analysis (safe copy)
+                        speaker_analysis = self._analyze_speaker_patterns(result)
+                        result.speaker_analysis = self._create_safe_copy(speaker_analysis)
+                        
+                    except Exception as e:
+                        logger.warning(f"Failed to enrich result: {e}")
+                        # Continue with other results
+                        continue
+            
+            # Update cross-reference database
+            self._update_cross_references(results, input_path)
+            
+        except Exception as e:
+            logger.error(f"Failed to enrich results: {e}")
+            # Return original results if enrichment fails
+            pass
         
         return results
     
